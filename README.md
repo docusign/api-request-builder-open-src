@@ -42,7 +42,7 @@ Example:
 1. Restart and test the application
 
 ## License
-This software uses the MIT open source license. See the LICENSE.md file.
+This software uses the MIT open source license. See the LICENSE file.
 
 ## Pull Requests
 Pull requests that use the MIT license are welcomed.
