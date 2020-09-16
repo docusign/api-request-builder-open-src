@@ -1,0 +1,8 @@
+The document includes text that can be used as anchor text tags for placing tabs.
+
+* `/name1/` -- The customer's name
+* `/email1/` -- The customer's email
+* `/sig1/` -- The signature location
+* `/row1/` -- A row below the signature line
+* `/row2/` -- Second row below the signature line
+* `/row3/` -- Third row below the signature line

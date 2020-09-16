@@ -1,0 +1,140 @@
+' DocuSign Builder example. Generated: {{generated}}
+' DocuSign (c) {{generated_year}}. MIT License -- https://opensource.org/licenses/MIT
+' @see <a href="https://developers.docusign.com">DocuSign Developer Center</a>
+
+Imports System.Net
+Imports System.Text
+Imports System.IO
+Imports Newtonsoft.Json.Linq
+
+Module Program
+    Const accountId As String = "{{account_id}}"
+    ' Note: the accessToken is for testing and is temporary. It is only good for 8 hours from the time you 
+    '       authenticated with API Request Builder. In production, use an OAuth flow to obtain access tokens.
+    Const accessToken As String = "{{access_token}}"
+    Const baseUri As String = "https://demo.docusign.net"
+    Const documentDir = "Assets"
+    Function SendDocuSignEnvelope() As String ' RETURNS envelopeId
+        ' Note: The JSON string constant uses the VB interpolated format.
+        ' See https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings
+        ' This format enables you to use the JSON as a template within your app, and
+        ' replace values with interpolated/dynamic values. Remember that string values must be 
+        ' escaped per the JSON string rules. (Escape " as \")
+{{envelope_definition}}
+
+        Dim url As String = $"{baseUri}/restapi/v2.1/accounts/{accountId}/envelopes"
+        Dim postReq As HttpWebRequest = DirectCast(WebRequest.Create(url), HttpWebRequest)
+        Dim CRLF As String = vbCrLf
+        Dim boundary As String = "multipartboundary_multipartboundary"
+        Dim hyphens As String = "--"
+        postReq.Method = "POST"
+        postReq.KeepAlive = False
+        postReq.ContentType = $"multipart/form-data; boundary={boundary}"
+        postReq.Accept = "application/json"
+        postReq.Headers.Add("Authorization", $"Bearer {accessToken}")
+        postReq.UserAgent = "DS Builder tool VB"
+        ' Send request as a multipart mime message with the
+        ' documents included in binary format (not Base64 encoded)
+        Dim encoding As New UTF8Encoding
+        Dim byteData As Byte()
+        Dim stringBuffer As String
+        Dim postreqstream As Stream = postReq.GetRequestStream()
+        Dim postLength As Int32 = 0
+        Dim rawFilePath As String = Directory.GetCurrentDirectory()  ' \\Mac\Home\www\VB_Example\VB_Example\bin\Debug\netcoreapp3.1\
+        Dim docFilePath As String = Path.GetFullPath(Path.Combine(rawFilePath, "..\..\..\" & documentDir & "\"))
+        Dim document As (mimeType As String, filename As String, documentId As String, diskFilename As String)
+
+        stringBuffer = 'Send preamble and JSON request
+            hyphens & boundary & CRLF & "Content-Type: application/json" &
+            CRLF & "Content-Disposition: form-data" & CRLF & CRLF & envelopeDefinition
+        byteData = encoding.GetBytes(stringBuffer)
+        postreqstream.Write(byteData, 0, byteData.Length)
+        postLength += byteData.Length
+
+        For Each document In documents
+            stringBuffer = CRLF & hyphens & boundary & CRLF & $"Content-Type: {document.mimeType}" &
+                CRLF & $"Content-Disposition: file; filename=""{document.filename}"";documentid={document.documentId}" & CRLF & CRLF
+            byteData = encoding.GetBytes(stringBuffer)
+            postreqstream.Write(byteData, 0, byteData.Length)
+            postLength += byteData.Length
+            ' add the file's contents
+            Dim inputFile = File.Open(docFilePath & document.diskFilename, FileMode.Open)
+            ' 1/2 Megabyte buffer. Dim statements specifies last index, so we subtract 1
+            Dim bufferSize As Integer = 1024 * 512
+            Dim bytes = New Byte(bufferSize - 1) {}
+            Dim bytesRead As Int32 = inputFile.Read(bytes, 0, bufferSize)
+            While bytesRead > 0
+                postreqstream.Write(bytes, 0, bytesRead)
+                postLength += bytesRead
+                bytesRead = inputFile.Read(bytes, 0, bufferSize)
+            End While
+            inputFile.Close()
+        Next
+
+        stringBuffer = CRLF & hyphens & boundary & hyphens & CRLF 'Send postamble
+        byteData = encoding.GetBytes(stringBuffer)
+        postreqstream.Write(byteData, 0, byteData.Length)
+        postLength += byteData.Length
+        postReq.ContentLength = postLength
+
+        Try
+            Dim postresponse As HttpWebResponse = DirectCast(postReq.GetResponse(), HttpWebResponse)
+            Dim postreqreader = New StreamReader(postresponse.GetResponseStream())
+            Dim resultsJSON As String = postreqreader.ReadToEnd
+            Console.WriteLine($"Create envelope results: {resultsJSON}")
+            Dim resultsJObj As JObject = JObject.Parse(resultsJSON)
+            Dim envelopeId As String = resultsJObj("envelopeId")
+            Console.WriteLine($"EnvelopeId: {envelopeId}")
+            Return envelopeId
+        Catch Ex As WebException
+            Console.WriteLine($"Error while creating envelope! {Ex.Message}")
+            If Ex.Response IsNot Nothing Then
+                Console.WriteLine($"Error response: {New StreamReader(Ex.Response.GetResponseStream).ReadToEnd}")
+            End If
+            Return ""
+        End Try
+    End Function
+
+    Sub RecipientView(envelopeId As String)
+{{recipient_view_request}}
+
+        If Not doRecipientView Or envelopeId = "" Then Return ' EARLY return
+        Dim url As String = $"{baseUri}/restapi/v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient"
+        Dim postReq As HttpWebRequest = DirectCast(WebRequest.Create(url), HttpWebRequest)
+        postReq.Method = "POST"
+        postReq.KeepAlive = False
+        postReq.ContentType = "application/json"
+        postReq.Accept = "application/json"
+        postReq.Headers.Add("Authorization", $"Bearer {accessToken}")
+        postReq.UserAgent = "DS Builder tool VB"
+        Dim encoding As New UTF8Encoding
+        Dim byteData As Byte()
+        Dim postreqstream As Stream = postReq.GetRequestStream()
+        byteData = encoding.GetBytes(recipientViewRequest)
+        postreqstream.Write(byteData, 0, byteData.Length)
+        postReq.ContentLength = byteData.Length
+        Try
+            Dim postresponse As HttpWebResponse = DirectCast(postReq.GetResponse(), HttpWebResponse)
+            Dim postreqreader = New StreamReader(postresponse.GetResponseStream())
+            Dim resultsJSON As String = postreqreader.ReadToEnd
+            Dim resultsJObj As JObject = JObject.Parse(resultsJSON)
+            Dim viewUrl As String = resultsJObj("url")
+            Console.WriteLine("Create recipient view succeeded.")
+            Console.WriteLine("Open the signing ceremony's long URL within 5 minutes:")
+            Console.WriteLine(viewUrl)
+        Catch Ex As WebException
+            Console.WriteLine($"Error requesting recipient view! {Ex.Message}")
+            If Ex.Response IsNot Nothing Then
+                Console.WriteLine($"Error response: {New StreamReader(Ex.Response.GetResponseStream).ReadToEnd}")
+            End If
+        End Try
+    End Sub
+
+    ' The mainline
+    Sub Main(args As String())
+        Console.WriteLine("Starting...")
+        Dim envelopeId As String = SendDocuSignEnvelope()
+        RecipientView(envelopeId)
+        Console.WriteLine("Done.")
+    End Sub
+End Module

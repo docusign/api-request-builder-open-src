@@ -1,0 +1,57 @@
+# DocuSign API Request Builder example. Generated: {{generated}}
+# DocuSign Ⓒ {{generated_year}}. MIT License -- https://opensource.org/licenses/MIT
+# @see <a href="https://developers.docusign.com">DocuSign Developer Center</a>
+require 'docusign_esign'
+# Note: the accessToken is for testing and is temporary. It is only good for 8 hours from the time you 
+#       authenticated with API Request Builder. In production, use an OAuth flow to obtain access tokens.
+ACCESS_TOKEN = "{{access_token}}"
+ACCOUNT_ID="{{account_id}}"
+DS_BASE_URI="https://demo.docusign.net"
+ 
+# Sends the envelope. Returns envelope_id.
+def send_envelope(api_client)
+{{envelope_definition}}
+ 
+    begin
+        envelopes_api = DocuSign_eSign::EnvelopesApi.new api_client
+        results = envelopes_api.create_envelope ACCOUNT_ID, envelope_definition
+        envelope_id = results.envelope_id
+        puts "Envelope was created! Envelope id: #{envelope_id}"
+    rescue DocuSign_eSign::ApiError => e
+        puts "Error response: #{e.response_body}"
+        envelope_id = false
+    end
+    return envelope_id
+end
+  
+# Requests the recipient_view url (the Signing Ceremony URL)
+def recipient_view(api_client, envelope_id)
+{{recipient_view_request}}
+ 
+    if !recipient_view_request || !envelope_id
+        return
+    end
+      
+    begin
+        envelopes_api = DocuSign_eSign::EnvelopesApi.new api_client
+        results = envelopes_api.create_recipient_view ACCOUNT_ID, envelope_id, recipient_view_request
+        puts "Open the (long) URL for the embedded signing ceremony: \n\n#{results.url}\n\n"
+    rescue DocuSign_eSign::ApiError => e
+        puts "Error response: #{e.response_body}"
+        envelope_id = false
+    end
+end
+ 
+# mainline
+def main
+    configuration = DocuSign_eSign::Configuration.new
+    configuration.host = DS_BASE_URI + "/restapi"
+    api_client = DocuSign_eSign::ApiClient.new configuration
+    api_client.default_headers["Authorization"] = "Bearer " + ACCESS_TOKEN
+    envelope_id = send_envelope(api_client)
+    recipient_view(api_client, envelope_id)
+    puts "Done!"
+end
+ 
+main()
+ 

@@ -1,0 +1,22 @@
+// createEnvelope
+Blockly.Blocks['createEnvelope'] = {
+  init: function() {
+    this.jsonInit({
+      "type": "createEnvelope",
+      "message0": "Create Envelope %1 %2",
+      "args0": [
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "input_statement",
+          "name": "attributes",
+          "check": "createEnvelopeAttribute"
+        }
+      ],
+      "colour": 0,
+      "tooltip": "",
+      "helpUrl": "",
+    });
+  }
+};

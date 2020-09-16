@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="DocuSign response page"
+    />
+    <title>API Request Builder response handler</title>
+  </head>
+  <body>
+    <p>Please wait.</p>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      const msg = {source: 'dsResponse', hash: window.location.hash || '',
+        href: window.location.href || ''}
+      if (window.opener) {
+        window.opener.postMessage(msg, '*');
+      } else {
+        window.parent.postMessage(msg, '*');
+      }
+    </script>
+  </body>
+</html>

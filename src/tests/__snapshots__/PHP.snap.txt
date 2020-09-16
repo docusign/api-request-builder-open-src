@@ -1,0 +1,42 @@
+    $sign_here_tab1 = new \DocuSign\eSign\Model\SignHere([
+        'anchor_string' => "/sig1/",  
+        'anchor_units' => "pixels",  
+        'anchor_x_offset' => "20" 
+        ]);
+    $sign_here_tabs1 = [$sign_here_tab1];
+    $tabs1 = new \DocuSign\eSign\Model\Tabs([
+        'sign_here_tabs' => $sign_here_tabs1 
+        ]);
+    $signer1 = new \DocuSign\eSign\Model\Signer([
+        'client_user_id' => "1000",  
+        'email' => "signer_email@example.com",  
+        'name' => "Signer's name",  
+        'recipient_id' => "1",  
+        'tabs' => $tabs1 
+        ]);
+    $signers1 = [$signer1];
+    $recipients1 = new \DocuSign\eSign\Model\Recipients([
+        'signers' => $signers1 
+        ]);
+    $document1 = new \DocuSign\eSign\Model\Document([
+        'document_id' => "1",  
+        'file_extension' => "pdf",  
+        'document_base64' => base64_encode(file_get_contents($docs_path.'anchorfields.pdf')),  # filename is anchorfields.pdf
+        'name' => "Example document" 
+        ]);
+    $documents1 = [$document1];
+    $envelope_definition = new \DocuSign\eSign\Model\EnvelopeDefinition([
+        'documents' => $documents1,  
+        'email_subject' => "Please sign the attached document",  
+        'recipients' => $recipients1,  
+        'status' => "sent" 
+        ]);
+
+
+    $recipient_view_request = new \DocuSign\eSign\Model\RecipientViewRequest([
+        'authentication_method' => "none",  
+        'client_user_id' => "1000",  
+        'email' => "signer_email@example.com",  
+        'return_url' => "https://docusign.com",  
+        'user_name' => "Signer's name" 
+        ]);

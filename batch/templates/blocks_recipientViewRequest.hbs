@@ -1,0 +1,24 @@
+// recipientViewRequest
+Blockly.Blocks['recipientViewRequest'] = {
+  init: function() {
+    this.jsonInit({
+      "type": "recipientViewRequest",
+      "message0": "Embedded Signing Ceremony %1 %2",
+      "args0": [
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "input_statement",
+          "name": "attributes",
+          "check": "recipientViewRequestAttribute"
+        }
+      ],
+      "colour": 3,
+      "tooltip": "",
+      "helpUrl": "",
+      "previousStatement": "createEnvelopeAttribute",
+    });
+  }
+};
+

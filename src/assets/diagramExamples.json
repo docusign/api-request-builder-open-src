@@ -1,0 +1,65 @@
+{
+   "version": 1,
+   "examples": [
+      {
+         "title": "Require one of multiple checkboxes",
+         "category": "Checkboxes",
+         "description": "Require one checkbox out of many to be checked.\nUses a tab_group.",
+         "filename": "required_one_of_multiple_checkboxes.dgm"
+      },
+      {
+         "title": "Required checkbox",
+         "category": "Checkboxes",
+         "description": "Require a checkbox to be checked.\nUses a tab_group.",
+         "filename": "required_checkbox.dgm"
+      },
+      {
+         "title": "HTML document",
+         "category": "Documents",
+         "description": "Uses an HTML source document with full_name, email_address, and sign_here fields (tabs).",
+         "filename": "html_document.dgm"
+      },
+      {
+         "title": "Reminder",
+         "category": "Reminder",
+         "description": "A remote signer (email invitation) with the reminder setting controlled by the API request, not by the account's defaults.",
+         "filename": "reminder.dgm"
+      },
+      {
+         "title": "Access Code",
+         "category": "Signer Authentication",
+         "description": "A shared secret between the signer and the sender acts to authenticate the signer since no one else knows the secret (the access code).",
+         "filename": "access_code.dgm"
+      },
+      {
+         "title": "ID Verify",
+         "category": "Signer Authentication",
+         "description": "Uses DocuSign ID Verify feature to verify the signer's government-issued ID.",
+         "filename": "id_verification.dgm"
+      },
+      {
+         "title": "KBA Authentication",
+         "category": "Signer Authentication",
+         "description": "KBA -- Knowledge Based Authentication. To pass the authentication step, the signer must enter their address information. The signer is then asked a series of questions to authenticate their identity. This service is not available for all countries.",
+         "filename": "kba_authentication.dgm"
+      },
+      {
+         "title": "Phone Authentication",
+         "category": "Signer Authentication",
+         "description": "To pass the authentication step, the signer must receive a phone call and then enter the access code that is given during the call.",
+         "filename": "phone_authentication.dgm"
+      },
+      {
+         "title": "SMS authentication",
+         "category": "Signer Authentication",
+         "description": "Sends a SMS message to verify the signer has access to receive SMS messages at a previously agreed phone number.",
+         "filename": "sms_verification.dgm"
+      },
+      {
+         "title": "Witness",
+         "category": "Witness",
+         "description": "During the Signing Ceremony, the signer is asked for the name and email of their witness. The witness is then sent an email invitation to sign the envelope as a witness to the original signer's signature.",
+         "filename": "witness.dgm"
+      }
+   ]
+}

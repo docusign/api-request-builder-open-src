@@ -1,0 +1,170 @@
+// {{#if block.specialParent}}{{block.specialParent}}{{else}}{{block.parent}}{{/if}}__{{block.name}} Attributes
+{{#each block.items}}
+{{#if itemObj}}
+{{#if (eq itemObj.name "propertyMetadata")}}
+Blockly.Blocks['{{../block.name}}__{{itemName}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{itemLabel}} %1 {{itemObj.items.1.itemLabel}}: %2 %3 options: %4",
+      "args0": [
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "field_dropdown",
+          "name": "{{itemObj.items.1.itemName}}",
+          "options": [
+            [
+              "editable",
+              "editable"
+            ],
+            [
+              "read_only",
+              "read_only"
+            ]
+          ]
+        },
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "input_statement",
+          "name": "attributes",
+          "check": "{{itemObj.name}}Attribute"
+        }
+      ],
+      "colour": {{../colour}},
+      "tooltip": "{{escape itemDescription}}",
+      "helpUrl": "",
+      "previousStatement": "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",
+      "nextStatement":     "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",    
+    });
+  }
+};
+{{else if (eq itemObj.name "smartSectionAnchorPosition")}}
+Blockly.Blocks['{{../block.name}}__{{itemName}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{itemLabel}} %1 {{itemObj.items.0.itemLabel}}: %2 %3 {{itemObj.items.1.itemLabel}}: %4 %5 {{itemObj.items.2.itemLabel}}: %6",
+      "args0": [
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "field_input",
+          "name": "{{itemObj.items.0.itemName}}",
+        },
+        {
+          "type": "input_dummy"
+        },        
+        {
+          "type": "field_input",
+          "name": "{{itemObj.items.1.itemName}}",
+        },
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "field_input",
+          "name": "{{itemObj.items.2.itemName}}",
+        },
+      ],
+      "colour": {{../colour}},
+      "tooltip": "{{escape itemDescription}}",
+      "helpUrl": "",
+      "previousStatement": "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",
+      "nextStatement":     "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",    
+    });
+  }
+};
+{{else if itemObj.arrayOfScalar}}
+// Item which is an array of Scalar
+Blockly.Blocks['{{itemObj.parent}}__{{itemObj.parentAttribute}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{itemLabel}} %1 %2",
+      "args0": [
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "input_statement",
+          "name": "{{itemObj.items.0.itemName}}",
+          "check": "{{itemObj.name}}Attribute"
+        }
+      ],
+      "colour": {{../colour}},
+      "tooltip": "{{escape itemObj.description}}",
+      "helpUrl": "",
+      "previousStatement": "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",
+      "nextStatement":     "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",    
+    });
+  }
+};
+// the scalar items (we're assuming string)
+Blockly.Blocks['{{itemObj.name}}__{{itemObj.items.0.itemName}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{itemObj.items.0.itemLabel}}: %1",
+      "args0": [
+        {
+          "type": "field_input",
+          "name": "{{itemObj.items.0.itemName}}",
+          "text": ""
+        }
+      ],
+      "colour": {{../colour}},
+      "tooltip": "{{escape itemObj.itemDescription}}",
+      "helpUrl": "",
+      "previousStatement": "{{itemObj.name}}Attribute",
+      "nextStatement":     "{{itemObj.name}}Attribute",    
+    });
+  }
+};
+
+
+{{else}}
+// PROBLEM: This item block was handled as a regular scalar but it has a child object!
+Blockly.Blocks['{{../block.name}}__{{itemName}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{itemLabel}}: %1",
+      "args0": [
+        {
+          "type": "field_input",
+          "name": "{{itemName}}",
+          "text": ""
+        }
+      ],
+      "colour": {{../colour}},
+      "tooltip": "{{escape itemDescription}}",
+      "helpUrl": "",
+      "previousStatement": "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",
+      "nextStatement":     "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",    
+    });
+  }
+};
+{{/if}}
+{{else}}
+Blockly.Blocks['{{../block.name}}__{{itemName}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{itemLabel}}: %1",
+      "args0": [
+        {
+          "type": "field_input",
+          "name": "{{itemName}}",
+          "text": ""
+        }
+      ],
+      "colour": {{../colour}},
+      "tooltip": "{{escape itemDescription}}",
+      "helpUrl": "",
+      "previousStatement": "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",
+      "nextStatement":     "{{#if ../block.specialName}}{{../block.specialName}}{{else}}{{../block.name}}{{/if}}Attribute",    
+    });
+  }
+};
+{{/if}}
+{{/each}}
+

@@ -1,0 +1,567 @@
+
+<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
+    
+  <category name="Create envelope" colour="210">
+    <block type="envelopeDefinition__allowRecipientRecursion"></block>
+    <block type="envelopeDefinition__brandId"></block>
+    <block type="envelopeDefinition__emailBlurb"></block>
+    <block type="envelopeDefinition__emailSubject"></block>
+    <block type="envelopeDefinition__is21CFRPart11"></block>
+    <block type="envelopeDefinition__status"></block>
+    <block type="envelopeDefinition__templateId"></block>
+  </category>
+
+  <category name="Embedded signing ceremony" colour="210">
+    <block type="recipientViewRequest"></block>
+    <block type="recipientViewRequest__authenticationMethod"></block>      
+    <block type="recipientViewRequest__clientUserId"></block>
+    <block type="recipientViewRequest__email"></block>
+    <block type="recipientViewRequest__recipientId"></block>      
+    <block type="recipientViewRequest__returnUrl"></block>
+    <block type="recipientViewRequest__userId"></block>
+    <block type="recipientViewRequest__userName"></block>      
+  </category>
+
+  <category name="carbon copy" colour="210">
+    <block type="carbonCopy"></block>
+    <block type="carbonCopy__accessCode"></block>
+    <block type="carbonCopy__email"></block>
+    <block type="carbonCopy__name"></block>
+    <block type="carbonCopy__note"></block>
+    <block type="carbonCopy__recipientId"></block>
+    <block type="carbonCopy__roleName"></block>
+    <block type="carbonCopy__routingOrder"></block>
+  </category>
+
+  <category name="certified delivery" colour="210">
+      <block type="certifiedDelivery"></block>
+      <block type="certifiedDelivery__accessCode"></block>
+      <block type="certifiedDelivery__email"></block>
+      <block type="certifiedDelivery__name"></block>
+      <block type="certifiedDelivery__note"></block>
+      <block type="certifiedDelivery__recipientId"></block>
+      <block type="certifiedDelivery__roleName"></block>
+      <block type="certifiedDelivery__routingOrder"></block>
+  </category>
+
+
+  <category name="Composite Templates" colour="210">
+  <category name="composite template" colour="210">
+      <block type="compositeTemplate"></block>
+      <block type="compositeTemplate__compositeTemplateId"></block>
+      <block type="compositeTemplate__pdfMetaDataTemplateSequence"></block>
+  </category>
+
+  <category name="inline template" colour="147">
+      <block type="inlineTemplate"></block>
+      <block type="inlineTemplate__sequence"></block>
+  </category>
+
+  <category name="server template" colour="261">
+      <block type="serverTemplate"></block>
+      <block type="serverTemplate__sequence"></block>
+      <block type="serverTemplate__templateId"></block>
+  </category>
+
+
+</category>
+
+  <category name="document" colour="210">
+    <block type="document"></block>
+      <block type="document__display"></block>
+      <block type="document__documentId"></block>
+      <block type="document__fileExtension"></block>
+      <block type="document__includeInDownload"></block>
+      <block type="document__name"></block>
+      <block type="document__signerMustAcknowledge"></block>
+      <block type="document__transformPdfFields"></block>
+  </category>
+
+  <category name="signer" colour="210">
+    <block type="signer"></block>
+      <block type="signer__accessCode"></block>
+      <block type="signer__clientUserId"></block>
+      <block type="signer__email"></block>
+      <block type="signer__idCheckConfigurationName"></block>
+      <block type="signer__name"></block>
+      <block type="signer__note"></block>
+      <block type="signer__recipientId"></block>
+      <block type="signer__roleName"></block>
+      <block type="signer__routingOrder"></block>
+      <block type="signer__userId"></block>
+  </category>
+
+
+  <category name="Tabs" colour="210">
+  
+    <category name="checkbox" colour="210">
+      <block type="checkbox"></block>
+      <block type="checkbox__anchorString"></block>
+      <block type="checkbox__anchorUnits"></block>
+      <block type="checkbox__anchorXOffset"></block>
+      <block type="checkbox__anchorYOffset"></block>
+      <block type="checkbox__bold"></block>
+      <block type="checkbox__documentId"></block>
+      <block type="checkbox__font"></block>      
+      <block type="checkbox__fontColor"></block>
+      <block type="checkbox__fontSize"></block>
+      <block type="checkbox__height"></block>
+      <block type="checkbox__italic"></block>
+      <block type="checkbox__locked"></block>      
+      <block type="checkbox__name"></block>
+      <block type="checkbox__pageNumber"></block>
+      <block type="checkbox__selected"></block>
+      <block type="checkbox__shared"></block>
+      <block type="checkbox__tabId"></block>
+      <block type="checkbox__tabLabel"></block>
+      <block type="checkbox__tabOrder"></block>
+      <block type="checkbox__templateRequired"></block>
+      <block type="checkbox__tooltip"></block>      
+      <block type="checkbox__underline"></block>
+      <block type="checkbox__width"></block>
+      <block type="checkbox__xPosition"></block>
+      <block type="checkbox__yPosition"></block>
+    </category>
+
+  <category name="company" colour="210">
+    <block type="company"></block>
+      <block type="company__anchorString"></block>
+      <block type="company__anchorUnits"></block>
+      <block type="company__anchorXOffset"></block>
+      <block type="company__anchorYOffset"></block>
+      <block type="company__bold"></block>
+      <block type="company__concealValueOnDocument"></block>
+      <block type="company__documentId"></block>
+      <block type="company__font"></block>
+      <block type="company__fontColor"></block>
+      <block type="company__fontSize"></block>
+      <block type="company__height"></block>
+      <block type="company__italic"></block>
+      <block type="company__locked"></block>
+      <block type="company__maxLength"></block>
+      <block type="company__name"></block>
+      <block type="company__pageNumber"></block>
+      <block type="company__required"></block>
+      <block type="company__tabId"></block>
+      <block type="company__tabLabel"></block>
+      <block type="company__tabOrder"></block>
+      <block type="company__tooltip"></block>
+      <block type="company__underline"></block>
+      <block type="company__value"></block>
+      <block type="company__width"></block>
+      <block type="company__xPosition"></block>
+      <block type="company__yPosition"></block>
+  </category>
+
+
+  <category name="date" colour="210">
+    <block type="date"></block>
+      <block type="date__anchorString"></block>
+      <block type="date__anchorUnits"></block>
+      <block type="date__anchorXOffset"></block>
+      <block type="date__anchorYOffset"></block>
+      <block type="date__bold"></block>
+      <block type="date__concealValueOnDocument"></block>
+      <block type="date__documentId"></block>
+      <block type="date__font"></block>
+      <block type="date__fontColor"></block>
+      <block type="date__fontSize"></block>
+      <block type="date__height"></block>
+      <block type="date__italic"></block>
+      <block type="date__locked"></block>
+      <block type="date__maxLength"></block>
+      <block type="date__name"></block>
+      <block type="date__pageNumber"></block>
+      <block type="date__required"></block>
+      <block type="date__shared"></block>
+      <block type="date__tabId"></block>
+      <block type="date__tabLabel"></block>
+      <block type="date__tabOrder"></block>
+      <block type="date__tabType"></block>
+      <block type="date__tooltip"></block>
+      <block type="date__underline"></block>
+      <block type="date__validationMessage"></block>
+      <block type="date__validationPattern"></block>
+      <block type="date__value"></block>
+      <block type="date__width"></block>
+      <block type="date__xPosition"></block>
+      <block type="date__yPosition"></block>
+  </category>
+
+  <category name="date signed" colour="210">
+    <block type="dateSigned"></block>
+      <block type="dateSigned__anchorString"></block>
+      <block type="dateSigned__anchorUnits"></block>
+      <block type="dateSigned__anchorXOffset"></block>
+      <block type="dateSigned__anchorYOffset"></block>
+      <block type="dateSigned__bold"></block>
+      <block type="dateSigned__documentId"></block>
+      <block type="dateSigned__font"></block>
+      <block type="dateSigned__fontColor"></block>
+      <block type="dateSigned__fontSize"></block>
+      <block type="dateSigned__height"></block>
+      <block type="dateSigned__italic"></block>
+      <block type="dateSigned__name"></block>
+      <block type="dateSigned__pageNumber"></block>
+      <block type="dateSigned__tabId"></block>
+      <block type="dateSigned__tabLabel"></block>
+      <block type="dateSigned__tabOrder"></block>
+      <block type="dateSigned__tabType"></block>
+      <block type="dateSigned__tooltip"></block>
+      <block type="dateSigned__underline"></block>
+      <block type="dateSigned__value"></block>
+      <block type="dateSigned__width"></block>
+      <block type="dateSigned__xPosition"></block>
+      <block type="dateSigned__yPosition"></block>
+  </category>
+
+  <category name="email" colour="210">
+    <block type="email"></block>
+      <block type="email__anchorString"></block>
+      <block type="email__anchorUnits"></block>
+      <block type="email__anchorXOffset"></block>
+      <block type="email__anchorYOffset"></block>
+      <block type="email__bold"></block>
+      <block type="email__concealValueOnDocument"></block>
+      <block type="email__documentId"></block>
+      <block type="email__font"></block>
+      <block type="email__fontColor"></block>
+      <block type="email__fontSize"></block>
+      <block type="email__height"></block>
+      <block type="email__italic"></block>
+      <block type="email__locked"></block>
+      <block type="email__maxLength"></block>
+      <block type="email__name"></block>
+      <block type="email__pageNumber"></block>
+      <block type="email__required"></block>
+      <block type="email__shared"></block>
+      <block type="email__status"></block>
+      <block type="email__tabId"></block>
+      <block type="email__tabLabel"></block>
+      <block type="email__tabOrder"></block>
+      <block type="email__tooltip"></block>
+      <block type="email__underline"></block>
+      <block type="email__validationMessage"></block>
+      <block type="email__validationPattern"></block>
+      <block type="email__value"></block>
+      <block type="email__width"></block>
+      <block type="email__xPosition"></block>
+      <block type="email__yPosition"></block>
+  </category>
+
+  <category name="email address" colour="210">
+    <block type="emailAddress"></block>
+      <block type="emailAddress__anchorString"></block>
+      <block type="emailAddress__anchorUnits"></block>
+      <block type="emailAddress__anchorXOffset"></block>
+      <block type="emailAddress__anchorYOffset"></block>
+      <block type="emailAddress__bold"></block>
+      <block type="emailAddress__documentId"></block>
+      <block type="emailAddress__font"></block>
+      <block type="emailAddress__fontColor"></block>
+      <block type="emailAddress__fontSize"></block>
+      <block type="emailAddress__height"></block>
+      <block type="emailAddress__italic"></block>
+      <block type="emailAddress__name"></block>
+      <block type="emailAddress__pageNumber"></block>
+      <block type="emailAddress__tabId"></block>
+      <block type="emailAddress__tabLabel"></block>
+      <block type="emailAddress__tabOrder"></block>
+      <block type="emailAddress__tooltip"></block>
+      <block type="emailAddress__underline"></block>
+      <block type="emailAddress__value"></block>
+      <block type="emailAddress__width"></block>
+      <block type="emailAddress__xPosition"></block>
+      <block type="emailAddress__yPosition"></block>
+  </category>
+
+    <category name="formula tab" colour="210">
+    <block type="formulaTab"></block>
+      <block type="formulaTab__anchorString"></block>
+      <block type="formulaTab__anchorUnits"></block>
+      <block type="formulaTab__anchorXOffset"></block>
+      <block type="formulaTab__anchorYOffset"></block>
+      <block type="formulaTab__bold"></block>
+      <block type="formulaTab__concealValueOnDocument"></block>
+      <block type="formulaTab__documentId"></block>
+      <block type="formulaTab__font"></block>
+      <block type="formulaTab__fontColor"></block>
+      <block type="formulaTab__fontSize"></block>
+      <block type="formulaTab__formula"></block>
+      <block type="formulaTab__height"></block>
+      <block type="formulaTab__hidden"></block>
+      <block type="formulaTab__isPaymentAmount"></block>
+      <block type="formulaTab__italic"></block>
+      <block type="formulaTab__locked"></block>
+      <block type="formulaTab__maxLength"></block>
+      <block type="formulaTab__name"></block>
+      <block type="formulaTab__pageNumber"></block>
+      <block type="formulaTab__required"></block>
+      <block type="formulaTab__roundDecimalPlaces"></block>
+      <block type="formulaTab__shared"></block>
+      <block type="formulaTab__tabId"></block>
+      <block type="formulaTab__tabLabel"></block>
+      <block type="formulaTab__tabOrder"></block>
+      <block type="formulaTab__tabType"></block>
+      <block type="formulaTab__tooltip"></block>
+      <block type="formulaTab__underline"></block>
+      <block type="formulaTab__validationMessage"></block>
+      <block type="formulaTab__validationPattern"></block>
+      <block type="formulaTab__value"></block>
+      <block type="formulaTab__width"></block>
+      <block type="formulaTab__xPosition"></block>
+      <block type="formulaTab__yPosition"></block>
+  </category>
+
+    <category name="initial here" colour="210">
+    <block type="initialHere"></block>
+      <block type="initialHere__anchorString"></block>
+      <block type="initialHere__anchorUnits"></block>
+      <block type="initialHere__anchorXOffset"></block>
+      <block type="initialHere__anchorYOffset"></block>
+      <block type="initialHere__documentId"></block>
+      <block type="initialHere__height"></block>
+      <block type="initialHere__name"></block>
+      <block type="initialHere__optional"></block>
+      <block type="initialHere__pageNumber"></block>
+      <block type="initialHere__scaleValue"></block>
+      <block type="initialHere__tabId"></block>
+      <block type="initialHere__tabLabel"></block>
+      <block type="initialHere__tabOrder"></block>
+      <block type="initialHere__tooltip"></block>
+      <block type="initialHere__width"></block>
+      <block type="initialHere__xPosition"></block>
+      <block type="initialHere__yPosition"></block>
+  </category>
+
+  <category name="list" colour="210">
+    <block type="list"></block>
+      <block type="list__anchorString"></block>
+      <block type="list__anchorUnits"></block>
+      <block type="list__anchorXOffset"></block>
+      <block type="list__anchorYOffset"></block>
+      <block type="list__bold"></block>
+      <block type="list__documentId"></block>
+      <block type="list__font"></block>
+      <block type="list__fontColor"></block>
+      <block type="list__fontSize"></block>
+      <block type="list__height"></block>
+      <block type="list__italic"></block>
+      <block type="list__listSelectedValue"></block>
+      <block type="list__locked"></block>
+      <block type="list__pageNumber"></block>
+      <block type="list__required"></block>
+      <block type="list__shared"></block>
+      <block type="list__tabId"></block>
+      <block type="list__tabLabel"></block>
+      <block type="list__tabOrder"></block>
+      <block type="list__tabType"></block>
+      <block type="list__tooltip"></block>
+      <block type="list__underline"></block>
+      <block type="list__value"></block>
+      <block type="list__width"></block>
+      <block type="list__xPosition"></block>
+      <block type="list__yPosition"></block>
+  </category>
+
+  <category name="list custom field" colour="210">
+    <block type="listCustomField"></block>
+      <block type="listCustomField__configurationType"></block>
+      <block type="listCustomField__fieldId"></block>
+      <block type="listCustomField__listItems"></block>
+      <block type="listCustomField_listItems__listItem"></block>
+      <block type="listCustomField__name"></block>
+      <block type="listCustomField__required"></block>
+      <block type="listCustomField__show"></block>
+      <block type="listCustomField__value"></block>
+  </category>
+
+  <category name="list item" colour="210">
+    <block type="listItem"></block>
+      <block type="listItem__selected"></block>
+      <block type="listItem__text"></block>
+      <block type="listItem__value"></block>
+  </category>
+
+    <category name="note" colour="210">
+    <block type="note"></block>
+      <block type="note__anchorString"></block>
+      <block type="note__anchorUnits"></block>
+      <block type="note__anchorXOffset"></block>
+      <block type="note__anchorYOffset"></block>
+      <block type="note__bold"></block>
+      <block type="note__documentId"></block>
+      <block type="note__font"></block>
+      <block type="note__fontColor"></block>
+      <block type="note__fontSize"></block>
+      <block type="note__height"></block>
+      <block type="note__italic"></block>
+      <block type="note__name"></block>
+      <block type="note__pageNumber"></block>
+      <block type="note__shared"></block>
+      <block type="note__tabId"></block>
+      <block type="note__tabLabel"></block>
+      <block type="note__tabOrder"></block>
+      <block type="note__tabType"></block>
+      <block type="note__tooltip"></block>
+      <block type="note__underline"></block>
+      <block type="note__value"></block>
+      <block type="note__width"></block>
+      <block type="note__xPosition"></block>
+      <block type="note__yPosition"></block>
+  </category>
+
+  <category name="number" colour="210">
+    <block type="number"></block>
+      <block type="number__anchorString"></block>
+      <block type="number__anchorUnits"></block>
+      <block type="number__anchorXOffset"></block>
+      <block type="number__anchorYOffset"></block>
+      <block type="number__bold"></block>
+      <block type="number__concealValueOnDocument"></block>
+      <block type="number__disableAutoSize"></block>
+      <block type="number__documentId"></block>
+      <block type="number__font"></block>
+      <block type="number__fontColor"></block>
+      <block type="number__fontSize"></block>
+      <block type="number__formula"></block>
+      <block type="number__height"></block>
+      <block type="number__isPaymentAmount"></block>
+      <block type="number__italic"></block>
+      <block type="number__locked"></block>
+      <block type="number__maxLength"></block>
+      <block type="number__name"></block>
+      <block type="number__pageNumber"></block>
+      <block type="number__required"></block>
+      <block type="number__shared"></block>
+      <block type="number__tabId"></block>
+      <block type="number__tabLabel"></block>
+      <block type="number__tabOrder"></block>
+      <block type="number__tabType"></block>
+      <block type="number__tooltip"></block>
+      <block type="number__underline"></block>
+      <block type="number__validationMessage"></block>
+      <block type="number__validationPattern"></block>
+      <block type="number__value"></block>
+      <block type="number__width"></block>
+      <block type="number__xPosition"></block>
+      <block type="number__yPosition"></block>
+  </category>
+
+  <category name="radio" colour="210">
+    <block type="radio"></block>
+      <block type="radio__anchorString"></block>
+      <block type="radio__anchorUnits"></block>
+      <block type="radio__anchorXOffset"></block>
+      <block type="radio__anchorYOffset"></block>
+      <block type="radio__bold"></block>
+      <block type="radio__font"></block>
+      <block type="radio__fontColor"></block>
+      <block type="radio__fontSize"></block>
+      <block type="radio__italic"></block>
+      <block type="radio__locked"></block>
+      <block type="radio__pageNumber"></block>
+      <block type="radio__required"></block>
+      <block type="radio__selected"></block>
+      <block type="radio__status"></block>
+      <block type="radio__tabId"></block>
+      <block type="radio__tabOrder"></block>
+      <block type="radio__underline"></block>
+      <block type="radio__value"></block>
+      <block type="radio__xPosition"></block>
+      <block type="radio__yPosition"></block>
+  </category>
+
+  <category name="radio group" colour="210">
+    <block type="radioGroup"></block>
+      <block type="radioGroup__documentId"></block>
+      <block type="radioGroup__groupName"></block>
+      <block type="radioGroup__shared"></block>
+      <block type="radioGroup__tooltip"></block>
+  </category>
+
+  <category name="sign here" colour="210">
+    <block type="signHere"></block>
+      <block type="signHere__anchorString"></block>
+      <block type="signHere__anchorUnits"></block>
+      <block type="signHere__anchorXOffset"></block>
+      <block type="signHere__anchorYOffset"></block>
+      <block type="signHere__documentId"></block>
+      <block type="signHere__height"></block>
+      <block type="signHere__name"></block>
+      <block type="signHere__optional"></block>
+      <block type="signHere__pageNumber"></block>
+      <block type="signHere__scaleValue"></block>
+      <block type="signHere__tabId"></block>
+      <block type="signHere__tabLabel"></block>
+      <block type="signHere__tabOrder"></block>
+      <block type="signHere__tooltip"></block>
+      <block type="signHere__width"></block>
+      <block type="signHere__xPosition"></block>
+      <block type="signHere__yPosition"></block>
+  </category>
+
+
+  <category name="signer attachment" colour="210">
+    <block type="signerAttachment"></block>
+      <block type="signerAttachment__anchorString"></block>
+      <block type="signerAttachment__anchorUnits"></block>
+      <block type="signerAttachment__anchorXOffset"></block>
+      <block type="signerAttachment__anchorYOffset"></block>
+      <block type="signerAttachment__documentId"></block>
+      <block type="signerAttachment__height"></block>
+      <block type="signerAttachment__name"></block>
+      <block type="signerAttachment__optional"></block>
+      <block type="signerAttachment__pageNumber"></block>
+      <block type="signerAttachment__scaleValue"></block>
+      <block type="signerAttachment__tabId"></block>
+      <block type="signerAttachment__tabLabel"></block>
+      <block type="signerAttachment__tabOrder"></block>
+      <block type="signerAttachment__tooltip"></block>
+      <block type="signerAttachment__width"></block>
+      <block type="signerAttachment__xPosition"></block>
+      <block type="signerAttachment__yPosition"></block>
+  </category>
+
+  <category name="text" colour="210">
+    <block type="text"></block>
+      <block type="text__anchorString"></block>
+      <block type="text__anchorUnits"></block>
+      <block type="text__anchorXOffset"></block>
+      <block type="text__anchorYOffset"></block>
+      <block type="text__bold"></block>
+      <block type="text__concealValueOnDocument"></block>
+      <block type="text__disableAutoSize"></block>
+      <block type="text__documentId"></block>
+      <block type="text__font"></block>
+      <block type="text__fontColor"></block>
+      <block type="text__fontSize"></block>
+      <block type="text__formula"></block>
+      <block type="text__height"></block>
+      <block type="text__isPaymentAmount"></block>
+      <block type="text__italic"></block>
+      <block type="text__locked"></block>
+      <block type="text__maxLength"></block>
+      <block type="text__name"></block>
+      <block type="text__pageNumber"></block>
+      <block type="text__required"></block>
+      <block type="text__shared"></block>
+      <block type="text__status"></block>
+      <block type="text__tabId"></block>
+      <block type="text__tabLabel"></block>
+      <block type="text__tabOrder"></block>
+      <block type="text__tabType"></block>
+      <block type="text__tooltip"></block>
+      <block type="text__underline"></block>
+      <block type="text__validationMessage"></block>
+      <block type="text__validationPattern"></block>
+      <block type="text__value"></block>
+      <block type="text__width"></block>
+      <block type="text__xPosition"></block>
+      <block type="text__yPosition"></block>
+  </category>
+  
+  </category>
+
+
+  <category name="A-Z complete index" colour="210">

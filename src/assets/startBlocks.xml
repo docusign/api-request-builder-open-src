@@ -1,0 +1,106 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="startBlocks" style="display: none;">
+  <block type="createEnvelope" id="J-V[?QHyq|9xdFfcJ!}P" deletable="false" movable="false" x="10" y="10">
+    <statement name="attributes">
+      <block type="envelopeDefinition__emailSubject" id="qh~x-#imRXCbk/A8_x0b">
+        <field name="emailSubject">Please sign the attached document</field>
+        <next>
+          <block type="envelopeDefinition__status" id="hsHSM|6fie6;Mk]V|}}-">
+            <field name="status">sent</field>
+            <next>
+              <block type="document" id="-l75gAEdt,O(Bpc%ozX1">
+                <field name="filename">anchorfields.pdf</field>
+                <statement name="attributes">
+                  <block type="document__name" id="3^o+R2?{i_^1d#8oEG6A">
+                    <field name="name">Example document</field>
+                    <next>
+                      <block type="document__fileExtension" id="3RAa0w)k8lQ#2!*(CL7t">
+                        <field name="fileExtension">pdf</field>
+                        <next>
+                          <block type="document__documentId" id="Rd+}2~,Z%;9Cz6gO?Kl.">
+                            <field name="documentId">1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="signer" id="f$oCCESrd9,2::1*p6kd">
+                    <statement name="attributes">
+                      <block type="signer__email" id="~:4C!iY[JeNCx%MEgvB~">
+                        <field name="email">signer_email@example.com</field>
+                        <next>
+                          <block type="signer__name" id="yC`+A9Z}Ec-T.Y%cE:Eg">
+                            <field name="name">Signer's name</field>
+                            <next>
+                              <block type="signer__recipientId" id="hH8#738:UEp3E~v4gU~i">
+                                <field name="recipientId">1</field>
+                                <next>
+                                  <block type="signer__clientUserId" id=",u`ZeH:q{:KsihU@D*xT">
+                                    <field name="clientUserId">1000</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="signHere" id="4TngQ5y|V%PyQcL_xNjr">
+                        <statement name="attributes">
+                          <block type="signHere__anchorString" id="%T+?NB`xPL{Vy5P[1DhY">
+                            <field name="anchorString">/sig1/</field>
+                            <next>
+                              <block type="signHere__anchorXOffset" id="h!aJd|wDb5QbI2G)UPOZ">
+                                <field name="anchorXOffset">20</field>
+                                <next>
+                                  <block type="signHere__anchorUnits" id="#)uHOOJ_ekx_G-Fjji;y">
+                                    <field name="anchorUnits">pixels</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="recipientViewRequest" id="0R:[@q3Y*r+o5k1S?IM?">
+                            <statement name="attributes">
+                              <block type="recipientViewRequest__returnUrl" id="O_ocm%mTBetUQd[4qM8`">
+                                <field name="returnUrl">https://docusign.com</field>
+                                <next>
+                                  <block type="recipientViewRequest__authenticationMethod" id="5C@yMaunE:t,A;{,h!N#">
+                                    <field name="authenticationMethod">none</field>
+                                    <next>
+                                      <block type="recipientViewRequest__clientUserId" id="OO4GPr1fWwsRD=%{2QjH">
+                                        <field name="clientUserId">1000</field>
+                                        <next>
+                                          <block type="recipientViewRequest__email" id="!c3[.~$T|Z`B9A+WKVRp">
+                                            <field name="email">signer_email@example.com</field>
+                                            <next>
+                                              <block type="recipientViewRequest__userName" id="RF{C`L%J_-Jw$F}d;;tL">
+                                                <field name="userName">Signer's name</field>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

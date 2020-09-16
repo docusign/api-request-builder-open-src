@@ -1,0 +1,50 @@
+			SignHere signHereTab1 = new SignHere
+			{
+				AnchorString = "/sig1/",  
+				AnchorUnits = "pixels",  
+				AnchorXOffset = "20" 
+			};
+			List<SignHere> signHereTabs1 = new List<SignHere> {signHereTab1};
+			Tabs tabs1 = new Tabs
+			{
+				SignHereTabs = signHereTabs1 
+			};
+			Signer signer1 = new Signer
+			{
+				ClientUserId = "1000",  
+				Email = "signer_email@example.com",  
+				Name = "Signer's name",  
+				RecipientId = "1",  
+				Tabs = tabs1 
+			};
+			List<Signer> signers1 = new List<Signer> {signer1};
+			Recipients recipients1 = new Recipients
+			{
+				Signers = signers1 
+			};
+			Document document1 = new Document
+			{
+				DocumentId = "1",  
+				FileExtension = "pdf",  
+				DocumentBase64 = ReadContent("anchorfields.pdf"),  // filename is anchorfields.pdf
+				Name = "Example document" 
+			};
+			List<Document> documents1 = new List<Document> {document1};
+			EnvelopeDefinition envelopeDefinition = new EnvelopeDefinition
+			{
+				Documents = documents1,  
+				EmailSubject = "Please sign the attached document",  
+				Recipients = recipients1,  
+				Status = "sent" 
+			};
+
+
+			bool doRecipientView = true;
+			RecipientViewRequest recipientViewRequest = new RecipientViewRequest
+			{
+				AuthenticationMethod = "none",  
+				ClientUserId = "1000",  
+				Email = "signer_email@example.com",  
+				ReturnUrl = "https://docusign.com",  
+				UserName = "Signer's name" 
+			};

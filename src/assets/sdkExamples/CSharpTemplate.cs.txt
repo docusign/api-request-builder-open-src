@@ -1,0 +1,103 @@
+// DocuSign Builder example. Generated: {{generated}}
+// DocuSign (c) {{generated_year}}. MIT License -- https://opensource.org/licenses/MIT
+// @see https://developers.docusign.com -- DocuSign Developer Center
+
+using System.Collections.Generic;
+using System.IO;
+using System;
+using DocuSign.eSign.Api;
+using DocuSign.eSign.Client;
+using DocuSign.eSign.Model;
+
+namespace CSharp_example
+{
+	class Program
+	{
+        // Note: the accessToken is for testing and is temporary. It is only good for 8 hours from the time you 
+        //       authenticated with API Request Builder. In production, use an OAuth flow to obtain access tokens.
+		private const string accessToken = "{{access_token}}";
+		private const string accountId = "{{account_id}}";
+		private const string basePath = "https://demo.docusign.net/restapi";
+
+		// Create the envelope request and send it to DocuSign
+		// Returns the resulting envelopeId or ""
+		static string SendDocuSignEnvelope()
+		{
+{{envelope_definition}}
+
+            ApiClient apiClient = new ApiClient(basePath);
+            apiClient.Configuration.AddDefaultHeader("Authorization", "Bearer " + accessToken);
+            EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
+            try
+            {
+                EnvelopeSummary results = envelopesApi.CreateEnvelope(accountId, envelopeDefinition);
+                Console.WriteLine($"Envelope status: {results.Status}. Envelope ID: {results.EnvelopeId}");
+                return results.EnvelopeId;
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception while creating envelope!");
+                Console.WriteLine($"Code: {e.ErrorCode}\nContent: {e.ErrorContent}");
+                //Console.WriteLine(e.Message);
+                return "";
+            }
+        }
+
+
+        // Request the URL for the recipient view (Signing Ceremony)
+        static void RecipientView(string envelopeId)
+        {
+{{recipient_view_request}}
+
+            if (!doRecipientView || envelopeId == "")
+            {
+                return; // EARLY return
+            }
+            ApiClient apiClient = new ApiClient(basePath);
+            apiClient.Configuration.AddDefaultHeader("Authorization", "Bearer " + accessToken);
+            EnvelopesApi envelopesApi = new EnvelopesApi(apiClient);
+            try
+            {
+                ViewUrl results = envelopesApi.CreateRecipientView(accountId, envelopeId, recipientViewRequest);
+                Console.WriteLine("Create recipient view succeeded.");
+                Console.WriteLine("Open the signing ceremony's long URL within 5 minutes:");
+                Console.WriteLine(results.Url);
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception while requesting recipient view!");
+                Console.WriteLine($"Code: {e.ErrorCode}\nContent: {e.ErrorContent}");
+                //Console.WriteLine(e.Message);
+            }
+        }
+
+		/// <summary>
+		/// This method read bytes content from files in the project's Resources directory
+		/// </summary>
+		/// <param name="fileName">resource path</param>
+		/// <returns>return Base64 encoded content as string</returns>
+		internal static string ReadContent(string fileName)
+		{
+			byte[] buff = null;
+			string path = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Resources", fileName);
+			using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+			{
+				using (BinaryReader br = new BinaryReader(stream))
+				{
+					long numBytes = new FileInfo(path).Length;
+					buff = br.ReadBytes((int)numBytes);
+				}
+			}
+			return Convert.ToBase64String(buff);
+		}
+
+		// The mainline
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Starting...");
+			string envelopeId = SendDocuSignEnvelope();
+			RecipientView(envelopeId);
+			Console.WriteLine("Done.");
+		}
+	}
+}

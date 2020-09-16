@@ -1,0 +1,80 @@
+{
+  "name": "api-request-builder-open-src",
+  "homepage": "http://localhost/api-request-builder-open-src/build/",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react-bootstrap": "^1.3.0",
+    "blockly": "^3.20200625.2",
+    "canvas": "^2.6.1",
+    "change-case": "^4.1.1",
+    "classnames": "^2.2.6",
+    "core-js": "^2.6.11",
+    "flexbox-react": "^4.4.0",
+    "pluralize": "^8.0.0",
+    "prism-react-renderer": "^1.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
+    "react-scripts": "3.4.1",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "prestart": "./update_example_zips.sh; node batch/diagramExamples.js",
+    "prebuild": "./update_example_zips.sh; node batch/diagramExamples.js",
+    "startOLD": "react-scripts start",
+    "start": "react-app-rewired start",
+    "buildOLD": "react-scripts build",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "diagramExamples": "./update_example_zips.sh; node batch/diagramExamples.js",
+    "processSwagger": "node batch/processSwagger.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "babel-plugin-transform-require-context": "^0.1.1",
+    "customize-cra": "^0.8.0",
+    "decamelize": "^3.2.0",
+    "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
+    "fs-extra": "^6.0.1",
+    "glob": "^7.1.5",
+    "glob-promise": "^3.4.0",
+    "handlebars": "^4.7.4",
+    "handlebars-loader": "^1.7.1",
+    "jest-raw-loader": "^1.0.1",
+    "path": "^0.12.7",
+    "raw-loader": "^3.1.0",
+    "react-app-rewired": "^2.1.5",
+    "react-test-renderer": "^16.13.1"
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/src/tests/setup-register-context.js"
+    ],
+    "moduleNameMapper": {
+      "^!!raw-loader!.*sdkExamples.*txt": "<rootDir>/src/tests/__mocks__/templateMock.txt",
+      "^!!raw-loader!\\./toolbox.xml": "<rootDir>/src/tests/__mocks__/xmlMock.xml",
+      "^!!raw-loader!.*/assets/startBlocks.xml": "<rootDir>/src/tests/__mocks__/xmlMock.xml",
+      "!!raw-loader!.*md\\.txt": "<rootDir>/src/tests/__mocks__/mdMock.md"
+    }
+  }
+}

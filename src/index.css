@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+div#statusDiv {font-size: 14px;}
+#root {height: 100%;}
+.topmargin {margin-top: .8em;}
+
+div#sdk pre {border: none;}
+#outputDiv {border-top: 1px solid #dddddd;}
+
+.hidden {display: none;}
+
+pre, code {
+  font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif !important;
+}
+.markdown code {background-color: #eff0f1;}
+
+
+#status {
+  height: 130px;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+#sdk pre code  {
+  display: block;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+#textButton {margin-top: 2.5em;}
+#textButton div {
+  display: inline-block;
+  margin-right: 2em;
+  width: 20em;
+}
+
+#npsSurvey div {
+    display: inline-block;
+    margin-right: 2em;
+    width: 50em;
+}
+
+/* .prism-code {font-size: 1.1em !important;} */
+.prism-code .token.property {
+  color: darkblue;
+}

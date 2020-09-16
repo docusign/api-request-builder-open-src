@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalLogin opens 1`] = `
+<Modal
+  appObject={
+    Object {
+      "blocklySection": Object {
+        "blocklyClearSelection": [Function],
+      },
+    }
+  }
+  closeButton={
+    <Modal.Close
+      onClick={[Function]}
+    />
+  }
+  height="content"
+  onClose={[Function]}
+  shrouded={false}
+  visible={true}
+  width="medium"
+>
+  <Modal.Header
+    title="Please login"
+  />
+  <Modal.Body
+    noPadding={false}
+  >
+    <div>
+      <p>
+        THIS IS THE MESSAGE
+      </p>
+    </div>
+  </Modal.Body>
+  <Modal.Footer>
+    <Button
+      accessibilityText=""
+      active={false}
+      disabled={false}
+      fullWidth={false}
+      hideTrigger={false}
+      href=""
+      iconPosition="beforeText"
+      inverted={false}
+      kind="primary"
+      menuTrigger={false}
+      onClick={[Function]}
+      size="large"
+      text="login"
+      type="button"
+    />
+    <Button
+      accessibilityText=""
+      active={false}
+      disabled={false}
+      fullWidth={false}
+      hideTrigger={false}
+      href=""
+      iconPosition="beforeText"
+      inverted={false}
+      kind="tertiary"
+      menuTrigger={false}
+      onClick={[Function]}
+      size="large"
+      text="Cancel"
+      type="button"
+    />
+  </Modal.Footer>
+</Modal>
+`;
+
+exports[`ModalLogin renders closed 1`] = `
+Array [
+  <div
+    aria-live="polite"
+    aria-relevant="additions"
+    id="SkipNavContainer"
+  />,
+  <div
+    aria-live="polite"
+    aria-relevant="additions"
+    className="css-cgizjj-Olive"
+    id="ToastMessageContainer"
+    role="status"
+  />,
+  <div
+    id="ModalContainer"
+  />,
+  <div
+    aria-live="polite"
+    aria-relevant="additions"
+    id="OverlayContainer"
+    role="dialog"
+  />,
+]
+`;

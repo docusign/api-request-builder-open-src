@@ -1,0 +1,54 @@
+{{#each items}}
+   {{#if itemObj}}
+      Blockly.JavaScript['{{../name}}__{{itemName}}'] = block => {
+      {{#if (eq itemObj.name "propertyMetadata")}}
+         let out = `{{escape itemName}}: {\n`;
+         out += `    {{escape itemObj.items.1.itemName}}: ${JSON.stringify(block.getFieldValue('{{itemObj.items.1.itemName}}'))},\n`;
+         out += `    {{escape itemObj.items.0.itemObj.parentAttribute}}: [\n`;
+         out += `        ${Blockly.JavaScript.statementToCode(block, 'attributes', Blockly.JavaScript.ORDER_NONE) || ''}`;
+         out += `    ]\n`;
+         out += `}${block.getNextBlock() ? ', ': ''}\n`;
+         return out
+      };
+      // Code for the array of scalar items (options)
+      Blockly.JavaScript['{{escape itemObj.items.0.itemObj.name}}'] = block =>
+         `    "${block.getFieldValue('{{itemObj.items.0.itemObj.items.0.itemName}}')}"${block.getNextBlock() ? ', ': ''}\n`;
+
+      {{else if (eq itemObj.name "smartSectionAnchorPosition")}}
+         let out = `{{escape itemName}}: {\n`;
+         {{!-- These smartSectionAnchorPosition attributes are not strings. See the Swagger file. In a future release will
+               need to handle scalar types better. But for v2.1 almost everything is a string --}}
+         out += `    {{escape itemObj.items.0.itemName}}: ${block.getFieldValue('{{itemObj.items.0.itemName}}')},\n`;
+         out += `    {{escape itemObj.items.1.itemName}}: ${block.getFieldValue('{{itemObj.items.1.itemName}}')},\n`;
+         out += `    {{escape itemObj.items.2.itemName}}: ${block.getFieldValue('{{itemObj.items.2.itemName}}')},\n`;
+         out += `}${block.getNextBlock() ? ', ': ''}\n`;
+         return out
+      };
+
+      {{else if itemObj.arrayOfScalar}}
+         let out = `    {{escape itemObj.parentAttribute}}: [\n`;
+         out    += `        ${Blockly.JavaScript.statementToCode(block, '{{itemObj.items.0.itemName}}', Blockly.JavaScript.ORDER_NONE) || ''}`;
+         out    += `    ]${block.getNextBlock() ? ', ': ''}\n`;
+         return out
+      };
+      // Code for the array of scalar items (options)
+      Blockly.JavaScript['{{itemObj.name}}__{{itemObj.items.0.itemName}}'] = block =>
+         `    ${JSON.stringify(block.getFieldValue('{{itemObj.items.0.itemName}}'))}${block.getNextBlock() ? ', ': ''}\n`;
+
+      {{else}}
+      // NEED CODE !!!
+      };
+      {{/if}}
+   {{else}}
+   Blockly.JavaScript['{{../name}}__{{itemName}}'] = block =>
+      {{#if (eq ../name "CreateEnvelope")}}
+         `\n.add_envQp("{{escape itemName}}", ${JSON.stringify(block.getFieldValue('{{itemName}}'))})`;
+      {{else if (eq ../name "envelopeDefinition")}}
+         `\n.add_envDefAttribute("{{escape itemName}}", ${JSON.stringify(block.getFieldValue('{{itemName}}'))})`;   
+      {{else if ../arrayOfScalar}}
+         `${JSON.stringify(block.getFieldValue('{{escape itemName}}'))}${block.getNextBlock() ? ', ': ''}\n`;
+      {{else}}
+         `{{escape itemName}}: ${JSON.stringify(block.getFieldValue('{{itemName}}'))}${block.getNextBlock() ? ', ': ''}\n`;
+      {{/if}}
+   {{/if}}
+{{/each}}

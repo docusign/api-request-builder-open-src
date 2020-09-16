@@ -1,0 +1,14 @@
+{{#if (eq name "document")}}
+Blockly.JavaScript['{{escape name}}'] = block => 
+  `\n.add_object("{{escape name}}", {
+  filename: ${JSON.stringify(block.getFieldValue('filename'))},
+${Blockly.JavaScript.statementToCode(block, 'attributes', Blockly.JavaScript.ORDER_NONE) || ''}})`;
+{{else if arrayOfScalar}}
+Blockly.JavaScript['{{escape name}}'] = block => 
+  `\n.add_object("{{escape name}}", [
+${Blockly.JavaScript.statementToCode(block, 'attributes', Blockly.JavaScript.ORDER_NONE) || ''}])`;
+{{else}}
+Blockly.JavaScript['{{escape name}}'] = block => 
+  `\n.add_object("{{escape name}}", {
+${Blockly.JavaScript.statementToCode(block, 'attributes', Blockly.JavaScript.ORDER_NONE) || ''}})`;
+{{/if}}

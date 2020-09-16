@@ -1,0 +1,24 @@
+object items are only listed for the last attribute.
+Eg propertyMetadata is the object for many attributes per tab type.
+
+No: 
+If an object ref is only used once then the current sw is ok
+But if more than once, add as a sub-statement inside parent.
+
+Better: object ref and array of scalar should be inline for the parent.
+
+
+3rd try
+if object attribiute does not include an arrayOfObj item (recurse) then include as an attribute of parent.
+include arrayOfScalar attribute as an attribute of parent
+
+***
+If exploring an attributeObject returns null then the object was previously explored.
+So copy the prior obj def to the item
+
+Why aren't propertyMetadata attributes showing in their parents
+
+~ ~ ~ ~ ~ ~
+
+Find Metadata blocks in toolbox: 
+ock>.*\n.*Metadata"></bl

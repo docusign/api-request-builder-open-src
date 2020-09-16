@@ -1,0 +1,25 @@
+{{!-- 
+Toolbox xml ref: https://developers.google.com/blockly/guides/configure/web/toolbox
+
+Incoming data:
+{
+  label: 'Create envelope', 
+  colour: objects.CreateEnvelope.colour, 
+  qp: qpItems.sort((a, b) => a.itemLabel < b.itemLabel ? -1 : 1), 
+  qpPrefix: 'CreateEnvelope::',
+  attr: attrItems.sort((a, b) => a.itemLabel < b.itemLabel ? -1 : 1),
+  attrPrefix: 'envelopeDefinition::', 
+  includeContainer: false
+} --}}
+  <category name="{{label}}" colour="{{colour}}">
+    {{#if includeContainer}}<block type="{{prefix}}"></block>{{/if ~}}
+    <label text="Query parameters" web-class="toolboxContainerLabel1"></label>
+    {{#each qp}}
+
+    <block type="{{../qpPrefix}}__{{itemName}}"></block>{{/each}}    
+    <label text="Attributes" web-class="toolboxContainerLabel2"></label>
+    {{#each attr}}
+
+    <block type="{{../attrPrefix}}__{{itemName}}"></block>{{/each}}    
+  </category>
+

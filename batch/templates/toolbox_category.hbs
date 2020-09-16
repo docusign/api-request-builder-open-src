@@ -1,0 +1,13 @@
+{{!-- 
+Toolbox xml ref: https://developers.google.com/blockly/guides/configure/web/toolbox
+
+Incoming data: See exploreSwagger.js
+--}}
+  <category name="{{label}}" colour="{{colour}}">
+    <block type="{{name}}"></block>
+    {{#each items}}
+      <block type="{{../name}}__{{itemName}}"></block>
+      {{#if itemExtraInclude}}<block type="{{itemExtraInclude}}"></block>{{/if}}
+    {{/each}}    
+  </category>
+

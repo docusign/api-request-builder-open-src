@@ -1,0 +1,69 @@
+# DocuSign API Request Builder example. Generated: {{generated}}
+# DocuSign Ⓒ {{generated_year}}. MIT License -- https://opensource.org/licenses/MIT
+# @see <a href="https://developers.docusign.com">DocuSign Developer Center</a>
+import docusign_esign as docusign
+import base64
+from os import path
+# Note: the accessToken is for testing and is temporary. It is only good for 8 hours from the time you 
+#       authenticated with API Request Builder. In production, use an OAuth flow to obtain access tokens.
+ACCESS_TOKEN = "{{access_token}}"
+ACCOUNT_ID="{{account_id}}"
+DS_BASE_URI="https://demo.docusign.net"
+ 
+def send_envelope(api_client):
+    """Sends the envelope. Returns envelope_id."""
+{{envelope_definition}}
+ 
+    try:
+        envelope_api = docusign.EnvelopesApi(api_client)
+        result = envelope_api.create_envelope(ACCOUNT_ID, 
+            envelope_definition=envelope_definition)
+
+        envelope_id = result.envelope_id
+        print(f"Envelope was created! Envelope id: {envelope_id}")
+        return envelope_id
+    except docusign.ApiException as err:
+        print (f"   Error code: {err.reason}")
+        print (f"   Error response: {err.body.decode('utf8')}")
+        return False
+ 
+def recipient_view(api_client, envelope_id):
+    """Requests the recipient_view url (the Signing Ceremony URL)"""
+{{recipient_view_request}}
+    if not recipient_view_request or not envelope_id:
+        return
+    try:
+        envelope_api = docusign.EnvelopesApi(api_client)
+        results = envelope_api.create_recipient_view(
+            account_id=ACCOUNT_ID,
+            envelope_id=envelope_id,
+            recipient_view_request=recipient_view_request
+        )
+
+        url = results.url
+        print(f"Open the (long) URL for the embedded signing ceremony:  \n{results.url}\n")
+    except docusign.ApiException as err:
+        print (f"   Error code: {err.reason}")
+        print (f"   Error response: {err.body.decode('utf8')}")
+ 
+def read_doc_file_base64 (filename):
+    """Return the file's contents, Base64 encoded"""
+    demo_docs_path = path.abspath(path.dirname(path.realpath(__file__)))
+    with open(path.join(demo_docs_path, filename), "rb") as file:
+        file_bytes = file.read()
+    base64_bytes = base64.b64encode(file_bytes).decode('ascii')
+    return base64_bytes
+ 
+def main():
+    """The mainline for the example"""
+    api_client = docusign.ApiClient()
+    api_client.host = DS_BASE_URI + "/restapi"
+    # For production and go-live, use OAuth to obtain the access token and account_id
+    api_client.set_default_header("Authorization", "Bearer " + ACCESS_TOKEN)
+
+    envelope_id = send_envelope(api_client)
+    recipient_view(api_client, envelope_id)
+    print("\nDone.\n")
+ 
+if __name__ == "__main__":
+    main()

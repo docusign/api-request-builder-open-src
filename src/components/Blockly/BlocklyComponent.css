@@ -1,0 +1,9 @@
+#blocklyDiv {
+  width: 700px;
+  position: absolute;
+}
+
+/*
+.blocklyWidgetDiv {
+  z-index: 0;
+} */

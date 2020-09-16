@@ -1,0 +1,131 @@
+{
+    "eventNotification": {
+        "loggingEnabled": "true",
+        "url": "http://be8a0cdcd.proxy.webhookapp.com",
+        "EnvelopeEvents": [
+            {
+                "envelopeEventStatusCode": "sent",
+                "includeDocuments": "false"
+            }
+        ]
+    },
+    "emailBlurb": "Test for Custom Fields Recipient Fields Document Fields",
+    "emailSubject": "Test - Custom fields galore!",
+    "status": "sent",
+    "notification": {
+        "useAccountDefaults": "false",
+        "reminders": {
+            "reminderEnabled": "true",
+            "reminderDelay": "2",
+            "reminderFrequency": "2"
+        },
+        "expirations": {
+            "expireEnabled": "true",
+            "expireAfter": "15",
+            "expireWarn": "1"
+        }
+    },
+    "compositeTemplates": [
+        {
+            "inlineTemplates": [
+                {
+                    "sequence": "1",
+                    "customFields": {
+                        "textCustomFields": [
+                            {
+                                "fieldId": "123",
+                                "name": "MYCustomID",
+                                "show": "false",
+                                "required": "false",
+                                "value": "myId012345"
+                            }
+                        ],
+                        "listCustomFields": [
+                            {
+                                "listItems": [
+                                    "elementValue1",
+                                    "elementValue2",
+                                    "elementValue3"
+                                ],
+                                "fieldId": "1234",
+                                "name": "myArrayListofItems",
+                                "show": "false",
+                                "required": "false",
+                                "value": "3"
+                            }
+                        ]
+                    },
+                    "documents": [
+                        {
+                            "documentId": "1",
+                            "name": "test1.txt",
+                            "documentFields": [
+                                {
+                                    "name": "Test1",
+                                    "value": "value for test1"
+                                }
+                            ]
+                        },
+                        {
+                            "documentId": "2",
+                            "name": "test2.txt"
+                        },
+                        {
+                            "documentId": "3",
+                            "name": "test3.txt"
+                        }
+                    ],
+                    "recipients": {
+                        "carbonCopies": [
+                            {
+                                "email": "emaildocusigntestercc1@mailinator.com",
+                                "name": "Jane Smith (see all but 3 document)",
+                                "recipientId": "3",
+                                "routingOrder": "3"
+                            },
+                            {
+                                "email": "emaildocusigntestercc2@mailinator.com",
+                                "name": "Rick Smith (see all)",
+                                "recipientId": "4",
+                                "routingOrder": "4"
+                            }
+                        ],
+                        "signers": [
+                            {
+                                "recipientId": "1",
+                                "customFields": [
+                                    "Recip 1 ID 1234"
+                                ],
+                                "name": "Bob Smith (Sees all)",
+                                "email": "emaildocusigntester1@mailinator.com",
+                                "routingOrder": "1",
+                                "tabs": {
+                                    "signHereTabs": [
+                                        {
+                                            "anchorString": "Sign1",
+                                            "tabLabel": "Sign Here 1"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "recipientId": "2",
+                                "name": "Samantha Smith (sees all but page 2)",
+                                "email": "emaildocusigntester2@mailinator.com",
+                                "routingOrder": "2",
+                                "tabs": {
+                                    "signHereTabs": [
+                                        {
+                                            "anchorString": "Sign2",
+                                            "tabLabel": "Sign Here 2"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

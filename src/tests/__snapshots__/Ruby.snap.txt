@@ -1,0 +1,42 @@
+    sign_here_tab1 = DocuSign_eSign::SignHere.new({
+        :anchorString => "/sig1/",  
+        :anchorUnits => "pixels",  
+        :anchorXOffset => "20" 
+        })
+    sign_here_tabs1 = [sign_here_tab1]
+    tabs1 = DocuSign_eSign::Tabs.new({
+        :signHereTabs => sign_here_tabs1 
+        })
+    signer1 = DocuSign_eSign::Signer.new({
+        :clientUserId => "1000",  
+        :email => "signer_email@example.com",  
+        :name => "Signer's name",  
+        :recipientId => "1",  
+        :tabs => tabs1 
+        })
+    signers1 = [signer1]
+    recipients1 = DocuSign_eSign::Recipients.new({
+        :signers => signers1 
+        })
+    document1 = DocuSign_eSign::Document.new({
+        :documentId => "1",  
+        :fileExtension => "pdf",  
+        :documentBase64 => Base64.encode64(File.binread("anchorfields.pdf")),  # filename is anchorfields.pdf
+        :name => "Example document" 
+        })
+    documents1 = [document1]
+    envelope_definition = DocuSign_eSign::EnvelopeDefinition.new({
+        :documents => documents1,  
+        :emailSubject => "Please sign the attached document",  
+        :recipients => recipients1,  
+        :status => "sent" 
+        })
+
+
+    recipient_view_request = DocuSign_eSign::RecipientViewRequest.new({
+        :authenticationMethod => "none",  
+        :clientUserId => "1000",  
+        :email => "signer_email@example.com",  
+        :returnUrl => "https://docusign.com",  
+        :userName => "Signer's name" 
+        })

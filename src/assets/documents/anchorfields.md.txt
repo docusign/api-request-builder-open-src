@@ -1,0 +1,12 @@
+The document includes text that can be used as anchor text tags for placing tabs.
+
+There are two signature tags: `/sig1/` and `/sig2/`
+
+There are two rows of field tags between the signature tags: `/field1/` and `/field2/`.
+Each row includes a second tag in the middle of the page: `/field1a/` and `/field2a/`
+
+After the second signature tag, there are three more rows of field tags. Each 
+has a tag on the left side of the page and center. The field tags are 
+`/field3/`, `/field3a/`, `/field4/`, `/field4a/`, `/field5/`, and `/field5a/`
+
+[View the document with visible field tags](anchorfields_view.pdf)

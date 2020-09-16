@@ -1,0 +1,62 @@
+<?php # DocuSign Builder example. Generated: {{generated}}
+      # DocuSign Ⓒ {{generated_year}}. MIT License -- https://opensource.org/licenses/MIT
+      # @see <a href="https://developers.docusign.com">DocuSign Developer Center</a>
+require_once ('vendor/autoload.php');
+require_once ('vendor/docusign/esign-client/autoload.php');
+# Note: the access_token is for testing and is temporary. It is only good for 8 hours from the time you 
+#       authenticated with API Request Builder. 
+const base_uri = 'https://demo.docusign.net/';
+const access_token = '{{access_token}}';
+const account_id = '{{account_id}}';
+const document_directory = '.'; # The directory with your documents, relative to this script's directory
+#
+function sendDocuSignEnvelope() {
+    $docs_path = getcwd() . '/' . document_directory . '/';
+{{envelope_definition}}
+
+    try {
+        $config = new \DocuSign\eSign\Configuration();
+        $config->setHost(base_uri . 'restapi');
+        $config->addDefaultHeader('Authorization', 'Bearer ' . access_token);
+        $api_client = new \DocuSign\eSign\Client\ApiClient($config);
+        $envelope_api = new \DocuSign\eSign\Api\EnvelopesApi($api_client);
+        $result = $envelope_api->createEnvelope(account_id, $envelope_definition);
+        $envelope_id = $result->getEnvelopeId();
+        printf("\nEnvelope status: %s. Envelope ID: %s\n", $result->getStatus(), $result->getEnvelopeId());
+        return $envelope_id;
+    } catch (Exception $e) {
+        printf ("\n\nException from createEnvelope!\n%s", $e->getMessage());
+        if ($e instanceof DocuSign\eSign\Client\ApiException) {
+            printf ("\nAPI error information: \n%s", $e->getResponseBody());
+        }
+        return FALSE;
+    }
+}
+
+function recipientView ($envelope_id) {
+{{recipient_view_request}}
+    if (!$recipient_view_request || !$envelope_id) {return;}
+
+    try {
+        $config = new \DocuSign\eSign\Configuration();
+        $config->setHost(base_uri . 'restapi');
+        $config->addDefaultHeader('Authorization', 'Bearer ' . access_token);
+        $api_client = new \DocuSign\eSign\Client\ApiClient($config);
+        $envelope_api = new \DocuSign\eSign\Api\EnvelopesApi($api_client);
+        $result = $envelope_api->createRecipientView(account_id, $envelope_id,
+            $recipient_view_request);
+        print ("\nCreate recipient view succeeded.");
+        printf ("Open the signing ceremony's long URL within 5 minutes: \n%s\n\n", $result->getUrl());
+    } catch (Exception $e) {
+        printf ("\n\nException from createRecipientView!\n%s", $e->getMessage());
+        if ($e instanceof DocuSign\eSign\Client\ApiException) {
+            printf ("\nAPI error information: \n%s", $e->getResponseBody());
+        }
+    }
+}
+
+# The mainline
+$envelope_id = sendDocuSignEnvelope();
+recipientView($envelope_id);
+print("Done.\n");
+

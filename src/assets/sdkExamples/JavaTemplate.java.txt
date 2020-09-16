@@ -1,0 +1,92 @@
+/**
+ * DocuSign Builder example. Generated: {{generated}}
+ * DocuSign Ⓒ {{generated_year}}. MIT License -- https://opensource.org/licenses/MIT
+ * @see <a href="https://developers.docusign.com">DocuSign Developer Center</a>
+ */
+package com.docusign.example;
+import com.docusign.esign.api.EnvelopesApi;
+import com.docusign.esign.client.ApiClient;
+import com.docusign.esign.client.ApiException;
+import com.docusign.esign.model.*;
+import com.sun.jersey.core.util.Base64;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+import java.util.List;
+
+public class Example {
+    /**
+     *  Note: the accessToken is for testing and is temporary. It is only good for 8 hours from the time you 
+     *  authenticated with API Request Builder. In production, use an OAuth flow to obtain access tokens.
+     */
+    private static String accessToken = "{{access_token}}";
+    private static String accountId = "{{account_id}}";
+    private static Long tokenExpirationSeconds = 8 * 60 * 60L;
+    private static String basePath = "https://demo.docusign.net/restapi";
+
+    /**
+     * Send envelope and optionally obtain recipientView URL
+     * @throws ApiException
+     * @throws IOException
+     */
+    private static void sendEnvelope() throws ApiException, IOException {
+
+{{envelope_definition}}
+ 
+        ApiClient apiClient = new ApiClient(basePath);
+        apiClient.setAccessToken(accessToken, tokenExpirationSeconds);
+ 
+        EnvelopesApi envelopeApi = new EnvelopesApi(apiClient);
+        EnvelopeSummary results = envelopeApi.createEnvelope(accountId, envelopeDefinition);
+        String envelopeId = results.getEnvelopeId();
+        System.out.println(
+                String.format("Envelope status: %s. Envelope ID: %s", results.getStatus(), envelopeId));
+ 
+{{recipient_view_request}}
+ 
+        if (doRecipientView) {
+            ViewUrl results1 = envelopeApi.createRecipientView(accountId, envelopeId, recipientViewRequest);
+            System.out.println(
+                String.format("Create recipient view succeeded.\nOpen the signing ceremony's URL within 5 minutes:\n%s",
+                    results1.getUrl()));
+        }
+    }
+ 
+    /**
+     * Read a file and return Base64 encoded contents
+     * @param path - file name within resources directory
+     * @return - return string
+     * @throws IOException
+     */
+    private static String readContentB64(String path) throws IOException {
+        InputStream is = Example.class.getResourceAsStream("/" + path);
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        int nRead;
+        byte[] data = new byte[1024];
+        while ((nRead = is.read(data, 0, data.length)) != -1) {
+            buffer.write(data, 0, nRead);
+        }
+        buffer.flush();
+        return new String(Base64.encode(buffer.toByteArray()));
+    }
+ 
+    /**
+     * The mainline...
+     */
+    public static void main(String[] args) {
+        try {
+            System.setProperty("https.protocols","TLSv1.2");
+            System.out.println("\nStarting... ");
+            sendEnvelope();
+            System.out.println("Done. Hit enter to exit the example");
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ApiException e) {
+            System.err.println("\nDocuSign Exception!");
+            System.err.println(String.format("    Reason: %d", e.getCode()));
+            System.err.println(String.format("    Error Reponse: %s", e.getResponseBody()));
+        }
+    }
+}

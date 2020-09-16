@@ -1,0 +1,20 @@
+// The option scalar for the propertyMetadata_options array
+Blockly.Blocks['propertyMetadata_options'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "option: %1",
+      "args0": [
+        {
+          "type": "field_input",
+          "name": "option",
+          "text": ""
+        }
+      ],
+      "colour": 12,
+      "tooltip": "An option string supported by this setting.",
+      "helpUrl": "",
+      "previousStatement": "propertyMetadataAttribute",
+      "nextStatement":     "propertyMetadataAttribute",    
+    });
+  }
+};

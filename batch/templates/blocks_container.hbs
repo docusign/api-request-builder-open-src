@@ -1,0 +1,54 @@
+{{#if (eq block.name "document")}}
+// {{block.name}}
+Blockly.Blocks['{{block.name}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{block.label}} %1 Filename: %2 %3",
+      "args0": [
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "input_dummy",
+          "name": "INPUT"
+        },
+        {
+          "type": "input_statement",
+          "name": "attributes",
+          "check": "{{block.name}}Attribute"
+        }
+      ],
+      "extensions": ["document_dropdown_extension"],
+      "colour": {{colour}},
+      "tooltip": "{{escape block.description}}",
+      "helpUrl": "",
+      "previousStatement": "{{block.ancestor}}Attribute",
+      "nextStatement": "{{block.ancestor}}Attribute",
+    });
+  }
+};
+{{else}}
+// {{block.name}}
+Blockly.Blocks['{{block.name}}'] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "{{block.label}} %1 %2",
+      "args0": [
+        {
+          "type": "input_dummy"
+        },
+        {
+          "type": "input_statement",
+          "name": "attributes",
+          "check": "{{block.name}}Attribute"
+        }
+      ],
+      "colour": {{colour}},
+      "tooltip": "{{escape block.description}}",
+      "helpUrl": "",
+      "previousStatement": "{{block.ancestor}}Attribute",
+      "nextStatement": "{{block.ancestor}}Attribute",
+    });
+  }
+};
+{{/if}}

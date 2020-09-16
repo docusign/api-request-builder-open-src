@@ -1,0 +1,49 @@
+ 
+        SignHere signHereTab1 = new SignHere();
+        signHereTab1.setAnchorString("/sig1/");  
+        signHereTab1.setAnchorUnits("pixels");  
+        signHereTab1.setAnchorXOffset("20");  
+
+        List<SignHere> signHereTabs1 = Arrays.asList(signHereTab1);
+ 
+        Tabs tabs1 = new Tabs();
+        tabs1.setSignHereTabs(signHereTabs1);  
+
+ 
+        Signer signer1 = new Signer();
+        signer1.setClientUserId("1000");  
+        signer1.setEmail("signer_email@example.com");  
+        signer1.setName("Signer's name");  
+        signer1.setRecipientId("1");  
+        signer1.setTabs(tabs1);  
+
+        List<Signer> signers1 = Arrays.asList(signer1);
+ 
+        Recipients recipients1 = new Recipients();
+        recipients1.setSigners(signers1);  
+
+ 
+        Document document1 = new Document();
+        document1.setDocumentId("1");  
+        document1.setFileExtension("pdf");  
+        document1.setDocumentBase64(readContentB64("anchorfields.pdf"));  // filename is anchorfields.pdf
+        document1.setName("Example document");  
+
+        List<Document> documents1 = Arrays.asList(document1);
+ 
+        EnvelopeDefinition envelopeDefinition = new EnvelopeDefinition();
+        envelopeDefinition.setDocuments(documents1);  
+        envelopeDefinition.setEmailSubject("Please sign the attached document");  
+        envelopeDefinition.setRecipients(recipients1);  
+        envelopeDefinition.setStatus("sent");  
+
+
+
+        Boolean doRecipientView = Boolean.TRUE;
+ 
+        RecipientViewRequest recipientViewRequest = new RecipientViewRequest();
+        recipientViewRequest.setAuthenticationMethod("none");  
+        recipientViewRequest.setClientUserId("1000");  
+        recipientViewRequest.setEmail("signer_email@example.com");  
+        recipientViewRequest.setReturnUrl("https://docusign.com");  
+        recipientViewRequest.setUserName("Signer's name");  

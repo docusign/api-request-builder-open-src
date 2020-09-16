@@ -1,0 +1,81 @@
+#!/usr/bin/env node
+ // DocuSign API Request Builder example. Generated: {{generated}}
+ // DocuSign Ⓒ {{generated_year}}. MIT License -- https://opensource.org/licenses/MIT
+'use strict';
+const fse = require('fs-extra')
+    , path = require('path')
+    , docusign = require('docusign-esign')
+    , baseUri = 'https://demo.docusign.net/'
+      // Note: the accessToken is for testing and is temporary. It is only good for 8 hours from the time you 
+      //       authenticated with API Request Builder. In production, use an OAuth flow to obtain access tokens.
+    , accessToken = '{{access_token}}'
+    , accountId = '{{account_id}}'
+    , documentDirectory = '.'; // The directory with your documents
+// Send the envelope
+async function sendDocuSignEnvelope () {
+{{envelope_definition}}
+ 
+    try {
+        const dsApi = new docusign.ApiClient();
+        dsApi.addDefaultHeader('Authorization', 'Bearer ' + accessToken);
+        dsApi.setBasePath(baseUri + 'restapi');
+        const envelopesApi = new docusign.EnvelopesApi(dsApi);
+        const envResults = await envelopesApi.createEnvelope(accountId, 
+            {envelopeDefinition: envelopeDefinition});
+        console.log (`Create envelope results: ${JSON.stringify(envResults, null, '    ')}`);
+        console.log (`The envelopeId is ${envResults.envelopeId}`);
+        return envResults.envelopeId;
+    } catch (e) {
+        console.log (`Error from DocuSign create envelope: ` +
+           `${(e && e.response && JSON.stringify(e.response.body))||e}`);
+        return false
+    }
+}
+ 
+/**
+ * Create the recipient view URL
+ * NOTE: the URL is time limited and must be used within a couple of minutes
+ */
+async function recipientView (envelopeId) {
+{{recipient_view_request}}
+    if (!recipientViewRequest || !envelopeId) {return}
+
+    try {
+        const dsApi = new docusign.ApiClient()
+        dsApi.addDefaultHeader('Authorization', 'Bearer ' + accessToken);
+        dsApi.setBasePath(baseUri + 'restapi');
+        const envelopesApi = new docusign.EnvelopesApi(dsApi);
+        const viewResults = await envelopesApi.createRecipientView(accountId, envelopeId,
+            {recipientViewRequest: recipientViewRequest});
+        
+        console.log (`\nCreate recipient view succeeded.`);
+        console.log (`Open the signing ceremony's long URL within 5 minutes: \n${viewResults.url}\n\n`);
+    } catch (e) {
+        console.log (`Error from DocuSign create recipient view: ` +
+            `${(e && e.response && JSON.stringify(e.response.body))||e}`);
+    }
+}
+ 
+/**
+ * Return the file's contents, Base64 encoded.
+ * @param {string} filename 
+ */
+async function readDocFileB64 (filename) {
+    const filePath = path.resolve(documentDirectory, filename);
+    try {
+        const contents = await fse.readFile(filePath);
+        return Buffer.from(contents).toString('base64')
+    } catch (e) {console.log (`Couldn't read ${filePath}: ${e}`); process.exit(1)} 
+}
+ 
+// The mainline
+/**
+ * The mainline can't use "await". So this intermediate function is used.
+ */
+async function asyncMainline() {
+    let envelopeId;
+    envelopeId = await sendDocuSignEnvelope();
+    await recipientView (envelopeId);
+    console.log("Done.\n");
+}
+asyncMainline()

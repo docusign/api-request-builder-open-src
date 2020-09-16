@@ -1,0 +1,620 @@
+{
+   "attachment": {
+      "envelopeDefinition": "envelopeAttachments",
+      "envelope": "envelopeAttachments"
+   },
+   "compositeTemplate": {
+      "envelopeDefinition": "compositeTemplates"
+   },
+   "document": {
+      "envelopeDefinition": "documents",
+      "compositeTemplate": "document",
+      "inlineTemplate": "documents"
+   },
+   "nameValue": {
+      "document": "documentFields",
+      "envelopeDocument": "documentFields"
+   },
+   "documentHtmlDefinition": {
+      "document": "htmlDefinition"
+   },
+   "documentHtmlDisplayAnchor": {
+      "documentHtmlDefinition": "displayAnchors"
+   },
+   "documentHtmlDisplaySettings": {
+      "documentHtmlDisplayAnchor": "displaySettings"
+   },
+   "documentHtmlCollapsibleDisplaySettings": {
+      "documentHtmlDisplaySettings": "collapsibleSettings"
+   },
+   "matchBox": {
+      "document": "matchBoxes"
+   },
+   "EnvelopeRecipientTabs": {
+      "document": "tabs",
+      "carbonCopy": "tabs",
+      "inPersonSigner": "tabs",
+      "notaryHost": "tabs",
+      "sealSign": "tabs",
+      "signer": "tabs",
+      "witness": "tabs",
+      "templateRole": "tabs"
+   },
+   "approve": {
+      "EnvelopeRecipientTabs": "approveTabs"
+   },
+   "errorDetails": {
+      "nameValue": "errorDetails",
+      "approve": "errorDetails",
+      "checkbox": "errorDetails",
+      "commentThread": "errorDetails",
+      "company": "errorDetails",
+      "dateSigned": "errorDetails",
+      "date": "errorDetails",
+      "decline": "errorDetails",
+      "draw": "errorDetails",
+      "emailAddress": "errorDetails",
+      "email": "errorDetails",
+      "envelopeId": "errorDetails",
+      "firstName": "errorDetails",
+      "formulaTab": "errorDetails",
+      "fullName": "errorDetails",
+      "initialHere": "errorDetails",
+      "lastName": "errorDetails",
+      "list": "errorDetails",
+      "notarize": "errorDetails",
+      "note": "errorDetails",
+      "number": "errorDetails",
+      "polyLineOverlay": "errorDetails",
+      "radio": "errorDetails",
+      "signerAttachment": "errorDetails",
+      "signHere": "errorDetails",
+      "stamp": "errorDetails",
+      "smartSection": "errorDetails",
+      "ssn": "errorDetails",
+      "tabGroup": "errorDetails",
+      "text": "errorDetails",
+      "title": "errorDetails",
+      "view": "errorDetails",
+      "zip": "errorDetails",
+      "listCustomField": "errorDetails",
+      "textCustomField": "errorDetails",
+      "envelopeDocument": "errorDetails",
+      "page": "errorDetails",
+      "folder": "errorDetails",
+      "EnvelopeRecipients": "errorDetails",
+      "agent": "errorDetails",
+      "documentVisibility": "errorDetails",
+      "userInfo": "errorDetails",
+      "carbonCopy": "errorDetails",
+      "certifiedDelivery": "errorDetails",
+      "editor": "errorDetails",
+      "inPersonSigner": "errorDetails",
+      "notaryHost": "errorDetails",
+      "intermediary": "errorDetails",
+      "sealSign": "errorDetails",
+      "signer": "errorDetails",
+      "witness": "errorDetails",
+      "EnvelopeLocks": "errorDetails",
+      "powerForm": "errorDetails"
+   },
+   "localePolicyTab": {
+      "approve": "localePolicy",
+      "commentThread": "localePolicy",
+      "company": "localePolicy",
+      "dateSigned": "localePolicy",
+      "date": "localePolicy",
+      "decline": "localePolicy",
+      "emailAddress": "localePolicy",
+      "email": "localePolicy",
+      "envelopeId": "localePolicy",
+      "firstName": "localePolicy",
+      "formulaTab": "localePolicy",
+      "fullName": "localePolicy",
+      "lastName": "localePolicy",
+      "list": "localePolicy",
+      "note": "localePolicy",
+      "number": "localePolicy",
+      "ssn": "localePolicy",
+      "text": "localePolicy",
+      "title": "localePolicy",
+      "view": "localePolicy",
+      "zip": "localePolicy"
+   },
+   "mergeField": {
+      "approve": "mergeField",
+      "checkbox": "mergeField",
+      "commentThread": "mergeField",
+      "company": "mergeField",
+      "dateSigned": "mergeField",
+      "date": "mergeField",
+      "decline": "mergeField",
+      "draw": "mergeField",
+      "emailAddress": "mergeField",
+      "email": "mergeField",
+      "envelopeId": "mergeField",
+      "firstName": "mergeField",
+      "formulaTab": "mergeField",
+      "fullName": "mergeField",
+      "initialHere": "mergeField",
+      "lastName": "mergeField",
+      "list": "mergeField",
+      "notarize": "mergeField",
+      "note": "mergeField",
+      "number": "mergeField",
+      "polyLineOverlay": "mergeField",
+      "signerAttachment": "mergeField",
+      "signHere": "mergeField",
+      "smartSection": "mergeField",
+      "ssn": "mergeField",
+      "tabGroup": "mergeField",
+      "text": "mergeField",
+      "title": "mergeField",
+      "view": "mergeField",
+      "zip": "mergeField"
+   },
+   "pathExtendedElement": {
+      "mergeField": "pathExtended"
+   },
+   "smartContractInformation": {
+      "approve": "smartContractInformation",
+      "checkbox": "smartContractInformation",
+      "commentThread": "smartContractInformation",
+      "company": "smartContractInformation",
+      "dateSigned": "smartContractInformation",
+      "date": "smartContractInformation",
+      "decline": "smartContractInformation",
+      "draw": "smartContractInformation",
+      "emailAddress": "smartContractInformation",
+      "email": "smartContractInformation",
+      "envelopeId": "smartContractInformation",
+      "firstName": "smartContractInformation",
+      "formulaTab": "smartContractInformation",
+      "fullName": "smartContractInformation",
+      "initialHere": "smartContractInformation",
+      "lastName": "smartContractInformation",
+      "list": "smartContractInformation",
+      "notarize": "smartContractInformation",
+      "note": "smartContractInformation",
+      "number": "smartContractInformation",
+      "polyLineOverlay": "smartContractInformation",
+      "signerAttachment": "smartContractInformation",
+      "signHere": "smartContractInformation",
+      "smartSection": "smartContractInformation",
+      "ssn": "smartContractInformation",
+      "tabGroup": "smartContractInformation",
+      "text": "smartContractInformation",
+      "title": "smartContractInformation",
+      "view": "smartContractInformation",
+      "zip": "smartContractInformation"
+   },
+   "checkbox": {
+      "EnvelopeRecipientTabs": "checkboxTabs"
+   },
+   "commentThread": {
+      "EnvelopeRecipientTabs": "commentThreadTabs"
+   },
+   "comment": {
+      "commentThread": "comments"
+   },
+   "company": {
+      "EnvelopeRecipientTabs": "companyTabs"
+   },
+   "dateSigned": {
+      "EnvelopeRecipientTabs": "dateSignedTabs"
+   },
+   "date": {
+      "EnvelopeRecipientTabs": "dateTabs"
+   },
+   "decline": {
+      "EnvelopeRecipientTabs": "declineTabs"
+   },
+   "draw": {
+      "EnvelopeRecipientTabs": "drawTabs"
+   },
+   "emailAddress": {
+      "EnvelopeRecipientTabs": "emailAddressTabs"
+   },
+   "email": {
+      "EnvelopeRecipientTabs": "emailTabs"
+   },
+   "envelopeId": {
+      "EnvelopeRecipientTabs": "envelopeIdTabs"
+   },
+   "firstName": {
+      "EnvelopeRecipientTabs": "firstNameTabs"
+   },
+   "formulaTab": {
+      "EnvelopeRecipientTabs": "formulaTabs"
+   },
+   "paymentDetails": {
+      "formulaTab": "paymentDetails"
+   },
+   "paymentLineItem": {
+      "paymentDetails": "lineItems"
+   },
+   "money": {
+      "paymentDetails": "total"
+   },
+   "fullName": {
+      "EnvelopeRecipientTabs": "fullNameTabs"
+   },
+   "initialHere": {
+      "EnvelopeRecipientTabs": "initialHereTabs"
+   },
+   "lastName": {
+      "EnvelopeRecipientTabs": "lastNameTabs"
+   },
+   "list": {
+      "EnvelopeRecipientTabs": "listTabs"
+   },
+   "listItem": {
+      "list": "listItems"
+   },
+   "notarize": {
+      "EnvelopeRecipientTabs": "notarizeTabs"
+   },
+   "note": {
+      "EnvelopeRecipientTabs": "noteTabs"
+   },
+   "number": {
+      "EnvelopeRecipientTabs": "numberTabs"
+   },
+   "polyLineOverlay": {
+      "EnvelopeRecipientTabs": "polyLineOverlayTabs"
+   },
+   "graphicsContext": {
+      "polyLineOverlay": "graphicsContext"
+   },
+   "polyLine": {
+      "polyLineOverlay": "polyLines"
+   },
+   "radioGroup": {
+      "EnvelopeRecipientTabs": "radioGroupTabs"
+   },
+   "radio": {
+      "radioGroup": "radios"
+   },
+   "signerAttachment": {
+      "EnvelopeRecipientTabs": "signerAttachmentTabs"
+   },
+   "signHere": {
+      "EnvelopeRecipientTabs": "signHereTabs"
+   },
+   "stamp": {
+      "signHere": "stamp"
+   },
+   "dateStampProperties": {
+      "stamp": "dateStampProperties"
+   },
+   "smartSection": {
+      "EnvelopeRecipientTabs": "smartSectionTabs"
+   },
+   "smartSectionDisplaySettings": {
+      "smartSection": "displaySettings"
+   },
+   "smartSectionCollapsibleDisplaySettings": {
+      "smartSectionDisplaySettings": "collapsibleSettings"
+   },
+   "ssn": {
+      "EnvelopeRecipientTabs": "ssnTabs"
+   },
+   "tabGroup": {
+      "EnvelopeRecipientTabs": "tabGroups"
+   },
+   "text": {
+      "EnvelopeRecipientTabs": "textTabs"
+   },
+   "title": {
+      "EnvelopeRecipientTabs": "titleTabs"
+   },
+   "view": {
+      "EnvelopeRecipientTabs": "viewTabs"
+   },
+   "zip": {
+      "EnvelopeRecipientTabs": "zipTabs"
+   },
+   "inlineTemplate": {
+      "compositeTemplate": "inlineTemplates"
+   },
+   "AccountCustomFields": {
+      "envelopeDefinition": "customFields",
+      "inlineTemplate": "customFields",
+      "envelope": "customFields"
+   },
+   "listCustomField": {
+      "AccountCustomFields": "listCustomFields"
+   },
+   "textCustomField": {
+      "AccountCustomFields": "textCustomFields"
+   },
+   "envelope": {
+      "inlineTemplate": "envelope",
+      "powerForm": "envelopes"
+   },
+   "emailSettings": {
+      "envelopeDefinition": "emailSettings",
+      "envelope": "emailSettings"
+   },
+   "bccEmailAddress": {
+      "emailSettings": "bccEmailAddresses"
+   },
+   "envelopeDocument": {
+      "envelopeDefinition": "envelopeDocuments",
+      "envelope": "envelopeDocuments"
+   },
+   "signatureType": {
+      "envelopeDocument": "availableDocumentTypes"
+   },
+   "page": {
+      "envelopeDocument": "pages"
+   },
+   "envelopeMetadata": {
+      "envelopeDefinition": "envelopeMetadata",
+      "envelope": "envelopeMetadata"
+   },
+   "folder": {
+      "envelopeDefinition": "folders",
+      "envelope": "folders",
+      "folder": "folders"
+   },
+   "filter": {
+      "folder": "filter"
+   },
+   "folderItem_v2": {
+      "folder": "folderItems"
+   },
+   "EnvelopeRecipients": {
+      "envelopeDefinition": "recipients",
+      "inlineTemplate": "recipients",
+      "envelope": "recipients",
+      "folderItem_v2": "recipients"
+   },
+   "agent": {
+      "EnvelopeRecipients": "agents"
+   },
+   "recipientAdditionalNotification": {
+      "agent": "additionalNotifications",
+      "carbonCopy": "additionalNotifications",
+      "certifiedDelivery": "additionalNotifications",
+      "editor": "additionalNotifications",
+      "intermediary": "additionalNotifications",
+      "signer": "additionalNotifications",
+      "witness": "additionalNotifications"
+   },
+   "recipientPhoneNumber": {
+      "recipientAdditionalNotification": "phoneNumber"
+   },
+   "documentVisibility": {
+      "agent": "documentVisibility",
+      "carbonCopy": "documentVisibility",
+      "certifiedDelivery": "documentVisibility",
+      "editor": "documentVisibility",
+      "inPersonSigner": "documentVisibility",
+      "notaryHost": "documentVisibility",
+      "intermediary": "documentVisibility",
+      "sealSign": "documentVisibility",
+      "signer": "documentVisibility",
+      "witness": "documentVisibility"
+   },
+   "recipientEmailNotification": {
+      "agent": "emailNotification",
+      "carbonCopy": "emailNotification",
+      "certifiedDelivery": "emailNotification",
+      "editor": "emailNotification",
+      "inPersonSigner": "emailNotification",
+      "notaryHost": "emailNotification",
+      "intermediary": "emailNotification",
+      "sealSign": "emailNotification",
+      "signer": "emailNotification",
+      "witness": "emailNotification",
+      "templateRole": "emailNotification"
+   },
+   "idCheckInformationInput": {
+      "agent": "idCheckInformationInput",
+      "carbonCopy": "idCheckInformationInput",
+      "certifiedDelivery": "idCheckInformationInput",
+      "editor": "idCheckInformationInput",
+      "inPersonSigner": "idCheckInformationInput",
+      "notaryHost": "idCheckInformationInput",
+      "intermediary": "idCheckInformationInput",
+      "sealSign": "idCheckInformationInput",
+      "signer": "idCheckInformationInput",
+      "witness": "idCheckInformationInput"
+   },
+   "addressInformationInput": {
+      "idCheckInformationInput": "addressInformationInput"
+   },
+   "addressInformation": {
+      "addressInformationInput": "addressInformation"
+   },
+   "dobInformationInput": {
+      "idCheckInformationInput": "dobInformationInput"
+   },
+   "ssn4InformationInput": {
+      "idCheckInformationInput": "ssn4InformationInput"
+   },
+   "ssn9InformationInput": {
+      "idCheckInformationInput": "ssn9InformationInput"
+   },
+   "recipientIdentityVerification": {
+      "agent": "identityVerification",
+      "carbonCopy": "identityVerification",
+      "certifiedDelivery": "identityVerification",
+      "editor": "identityVerification",
+      "inPersonSigner": "identityVerification",
+      "notaryHost": "identityVerification",
+      "intermediary": "identityVerification",
+      "sealSign": "identityVerification",
+      "signer": "identityVerification",
+      "witness": "identityVerification"
+   },
+   "recipientIdentityInputOption": {
+      "recipientIdentityVerification": "inputOptions"
+   },
+   "recipientIdentityPhoneNumber": {
+      "recipientIdentityInputOption": "phoneNumberList"
+   },
+   "recipientPhoneAuthentication": {
+      "agent": "phoneAuthentication",
+      "carbonCopy": "phoneAuthentication",
+      "certifiedDelivery": "phoneAuthentication",
+      "editor": "phoneAuthentication",
+      "inPersonSigner": "phoneAuthentication",
+      "notaryHost": "phoneAuthentication",
+      "intermediary": "phoneAuthentication",
+      "sealSign": "phoneAuthentication",
+      "signer": "phoneAuthentication",
+      "witness": "phoneAuthentication"
+   },
+   "recipientAttachment": {
+      "agent": "recipientAttachments",
+      "carbonCopy": "recipientAttachments",
+      "certifiedDelivery": "recipientAttachments",
+      "editor": "recipientAttachments",
+      "inPersonSigner": "recipientAttachments",
+      "notaryHost": "recipientAttachments",
+      "intermediary": "recipientAttachments",
+      "sealSign": "recipientAttachments",
+      "signer": "recipientAttachments",
+      "witness": "recipientAttachments"
+   },
+   "featureAvailableMetadata": {
+      "agent": "recipientFeatureMetadata",
+      "carbonCopy": "recipientFeatureMetadata",
+      "certifiedDelivery": "recipientFeatureMetadata",
+      "editor": "recipientFeatureMetadata",
+      "inPersonSigner": "recipientFeatureMetadata",
+      "notaryHost": "recipientFeatureMetadata",
+      "intermediary": "recipientFeatureMetadata",
+      "sealSign": "recipientFeatureMetadata",
+      "signer": "recipientFeatureMetadata",
+      "witness": "recipientFeatureMetadata"
+   },
+   "userInfo": {
+      "envelopeDefinition": "sender",
+      "envelope": "sender",
+      "folder": "owner",
+      "agent": "signingGroupUsers",
+      "carbonCopy": "signingGroupUsers",
+      "certifiedDelivery": "signingGroupUsers",
+      "editor": "signingGroupUsers",
+      "inPersonSigner": "signingGroupUsers",
+      "notaryHost": "signingGroupUsers",
+      "intermediary": "signingGroupUsers",
+      "signer": "signingGroupUsers",
+      "witness": "signingGroupUsers",
+      "EnvelopeLocks": "lockedByUser"
+   },
+   "recipientSMSAuthentication": {
+      "agent": "smsAuthentication",
+      "carbonCopy": "smsAuthentication",
+      "certifiedDelivery": "smsAuthentication",
+      "editor": "smsAuthentication",
+      "inPersonSigner": "smsAuthentication",
+      "notaryHost": "smsAuthentication",
+      "intermediary": "smsAuthentication",
+      "sealSign": "smsAuthentication",
+      "signer": "smsAuthentication",
+      "witness": "smsAuthentication"
+   },
+   "socialAuthentication": {
+      "agent": "socialAuthentications",
+      "carbonCopy": "socialAuthentications",
+      "certifiedDelivery": "socialAuthentications",
+      "editor": "socialAuthentications",
+      "inPersonSigner": "socialAuthentications",
+      "notaryHost": "socialAuthentications",
+      "intermediary": "socialAuthentications",
+      "sealSign": "socialAuthentications",
+      "signer": "socialAuthentications",
+      "witness": "socialAuthentications"
+   },
+   "carbonCopy": {
+      "EnvelopeRecipients": "carbonCopies"
+   },
+   "recipientProofFile": {
+      "carbonCopy": "proofFile",
+      "certifiedDelivery": "proofFile",
+      "signer": "proofFile",
+      "witness": "proofFile"
+   },
+   "certifiedDelivery": {
+      "EnvelopeRecipients": "certifiedDeliveries"
+   },
+   "editor": {
+      "EnvelopeRecipients": "editors"
+   },
+   "inPersonSigner": {
+      "EnvelopeRecipients": "inPersonSigners"
+   },
+   "notaryHost": {
+      "inPersonSigner": "notaryHost"
+   },
+   "recipientSignatureProvider": {
+      "inPersonSigner": "recipientSignatureProviders",
+      "sealSign": "recipientSignatureProviders",
+      "signer": "recipientSignatureProviders",
+      "witness": "recipientSignatureProviders",
+      "templateRole": "recipientSignatureProviders"
+   },
+   "recipientSignatureProviderOptions": {
+      "recipientSignatureProvider": "signatureProviderOptions"
+   },
+   "recipientSignatureInformation": {
+      "inPersonSigner": "signatureInfo",
+      "signer": "signatureInfo",
+      "witness": "signatureInfo"
+   },
+   "intermediary": {
+      "EnvelopeRecipients": "intermediaries"
+   },
+   "sealSign": {
+      "EnvelopeRecipients": "seals"
+   },
+   "signer": {
+      "EnvelopeRecipients": "signers"
+   },
+   "witness": {
+      "EnvelopeRecipients": "witnesses"
+   },
+   "EnvelopeLocks": {
+      "envelopeDefinition": "lockInformation",
+      "envelope": "lockInformation"
+   },
+   "notification": {
+      "envelopeDefinition": "notification",
+      "envelope": "notification"
+   },
+   "expirations": {
+      "notification": "expirations"
+   },
+   "reminders": {
+      "notification": "reminders"
+   },
+   "powerForm": {
+      "envelopeDefinition": "powerForm",
+      "envelope": "powerForm"
+   },
+   "powerFormRecipient": {
+      "powerForm": "recipients"
+   },
+   "serverTemplate": {
+      "compositeTemplate": "serverTemplates"
+   },
+   "eventNotification": {
+      "envelopeDefinition": "eventNotification"
+   },
+   "envelopeEvent": {
+      "eventNotification": "envelopeEvents"
+   },
+   "connectEventData": {
+      "eventNotification": "eventData"
+   },
+   "recipientEvent": {
+      "eventNotification": "recipientEvents"
+   },
+   "templateRole": {
+      "envelopeDefinition": "templateRoles"
+   }
+}

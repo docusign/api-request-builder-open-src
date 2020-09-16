@@ -1,0 +1,42 @@
+    sign_here_tab1 = docusign.SignHere(
+        anchor_string = "/sig1/",  
+        anchor_units = "pixels",  
+        anchor_x_offset = "20" 
+        )
+    sign_here_tabs1 = [sign_here_tab1]
+    tabs1 = docusign.Tabs(
+        sign_here_tabs = sign_here_tabs1 
+        )
+    signer1 = docusign.Signer(
+        client_user_id = "1000",  
+        email = "signer_email@example.com",  
+        name = "Signer's name",  
+        recipient_id = "1",  
+        tabs = tabs1 
+        )
+    signers1 = [signer1]
+    recipients1 = docusign.Recipients(
+        signers = signers1 
+        )
+    document1 = docusign.Document(
+        document_id = "1",  
+        file_extension = "pdf",  
+        document_base64 = read_doc_file_base64("anchorfields.pdf"),  # filename is anchorfields.pdf
+        name = "Example document" 
+        )
+    documents1 = [document1]
+    envelope_definition = docusign.EnvelopeDefinition(
+        documents = documents1,  
+        email_subject = "Please sign the attached document",  
+        recipients = recipients1,  
+        status = "sent" 
+        )
+
+
+    recipient_view_request = docusign.RecipientViewRequest(
+        authentication_method = "none",  
+        client_user_id = "1000",  
+        email = "signer_email@example.com",  
+        return_url = "https://docusign.com",  
+        user_name = "Signer's name" 
+        )

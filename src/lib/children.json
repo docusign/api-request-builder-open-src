@@ -1,0 +1,2182 @@
+{
+   "envelopeDefinition": {
+      "attachment": {
+         "attribute": "envelopeAttachments",
+         "style": "arrayOfObject"
+      },
+      "compositeTemplate": {
+         "attribute": "compositeTemplates",
+         "style": "arrayOfObject"
+      },
+      "AccountCustomFields": {
+         "attribute": "customFields",
+         "style": "object"
+      },
+      "document": {
+         "attribute": "documents",
+         "style": "arrayOfObject"
+      },
+      "emailSettings": {
+         "attribute": "emailSettings",
+         "style": "object"
+      },
+      "envelopeDocument": {
+         "attribute": "envelopeDocuments",
+         "style": "arrayOfObject"
+      },
+      "envelopeMetadata": {
+         "attribute": "envelopeMetadata",
+         "style": "object"
+      },
+      "eventNotification": {
+         "attribute": "eventNotification",
+         "style": "object"
+      },
+      "folder": {
+         "attribute": "folders",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeLocks": {
+         "attribute": "lockInformation",
+         "style": "object"
+      },
+      "notification": {
+         "attribute": "notification",
+         "style": "object"
+      },
+      "powerForm": {
+         "attribute": "powerForm",
+         "style": "object"
+      },
+      "EnvelopeRecipients": {
+         "attribute": "recipients",
+         "style": "object"
+      },
+      "userInfo": {
+         "attribute": "sender",
+         "style": "object"
+      },
+      "templateRole": {
+         "attribute": "templateRoles",
+         "style": "arrayOfObject"
+      }
+   },
+   "compositeTemplate": {
+      "document": {
+         "attribute": "document",
+         "style": "object"
+      },
+      "inlineTemplate": {
+         "attribute": "inlineTemplates",
+         "style": "arrayOfObject"
+      },
+      "serverTemplate": {
+         "attribute": "serverTemplates",
+         "style": "arrayOfObject"
+      }
+   },
+   "document": {
+      "nameValue": {
+         "attribute": "documentFields",
+         "style": "arrayOfObject"
+      },
+      "documentHtmlDefinition": {
+         "attribute": "htmlDefinition",
+         "style": "object"
+      },
+      "matchBox": {
+         "attribute": "matchBoxes",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   },
+   "nameValue": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      }
+   },
+   "documentHtmlDefinition": {
+      "documentHtmlDisplayAnchor": {
+         "attribute": "displayAnchors",
+         "style": "arrayOfObject"
+      }
+   },
+   "documentHtmlDisplayAnchor": {
+      "documentHtmlDisplaySettings": {
+         "attribute": "displaySettings",
+         "style": "object"
+      }
+   },
+   "documentHtmlDisplaySettings": {
+      "documentHtmlCollapsibleDisplaySettings": {
+         "attribute": "collapsibleSettings",
+         "style": "object"
+      }
+   },
+   "EnvelopeRecipientTabs": {
+      "approve": {
+         "attribute": "approveTabs",
+         "style": "arrayOfObject"
+      },
+      "checkbox": {
+         "attribute": "checkboxTabs",
+         "style": "arrayOfObject"
+      },
+      "commentThread": {
+         "attribute": "commentThreadTabs",
+         "style": "arrayOfObject"
+      },
+      "company": {
+         "attribute": "companyTabs",
+         "style": "arrayOfObject"
+      },
+      "dateSigned": {
+         "attribute": "dateSignedTabs",
+         "style": "arrayOfObject"
+      },
+      "date": {
+         "attribute": "dateTabs",
+         "style": "arrayOfObject"
+      },
+      "decline": {
+         "attribute": "declineTabs",
+         "style": "arrayOfObject"
+      },
+      "draw": {
+         "attribute": "drawTabs",
+         "style": "arrayOfObject"
+      },
+      "emailAddress": {
+         "attribute": "emailAddressTabs",
+         "style": "arrayOfObject"
+      },
+      "email": {
+         "attribute": "emailTabs",
+         "style": "arrayOfObject"
+      },
+      "envelopeId": {
+         "attribute": "envelopeIdTabs",
+         "style": "arrayOfObject"
+      },
+      "firstName": {
+         "attribute": "firstNameTabs",
+         "style": "arrayOfObject"
+      },
+      "formulaTab": {
+         "attribute": "formulaTabs",
+         "style": "arrayOfObject"
+      },
+      "fullName": {
+         "attribute": "fullNameTabs",
+         "style": "arrayOfObject"
+      },
+      "initialHere": {
+         "attribute": "initialHereTabs",
+         "style": "arrayOfObject"
+      },
+      "lastName": {
+         "attribute": "lastNameTabs",
+         "style": "arrayOfObject"
+      },
+      "list": {
+         "attribute": "listTabs",
+         "style": "arrayOfObject"
+      },
+      "notarize": {
+         "attribute": "notarizeTabs",
+         "style": "arrayOfObject"
+      },
+      "note": {
+         "attribute": "noteTabs",
+         "style": "arrayOfObject"
+      },
+      "number": {
+         "attribute": "numberTabs",
+         "style": "arrayOfObject"
+      },
+      "polyLineOverlay": {
+         "attribute": "polyLineOverlayTabs",
+         "style": "arrayOfObject"
+      },
+      "radioGroup": {
+         "attribute": "radioGroupTabs",
+         "style": "arrayOfObject"
+      },
+      "signerAttachment": {
+         "attribute": "signerAttachmentTabs",
+         "style": "arrayOfObject"
+      },
+      "signHere": {
+         "attribute": "signHereTabs",
+         "style": "arrayOfObject"
+      },
+      "smartSection": {
+         "attribute": "smartSectionTabs",
+         "style": "arrayOfObject"
+      },
+      "ssn": {
+         "attribute": "ssnTabs",
+         "style": "arrayOfObject"
+      },
+      "tabGroup": {
+         "attribute": "tabGroups",
+         "style": "arrayOfObject"
+      },
+      "text": {
+         "attribute": "textTabs",
+         "style": "arrayOfObject"
+      },
+      "title": {
+         "attribute": "titleTabs",
+         "style": "arrayOfObject"
+      },
+      "view": {
+         "attribute": "viewTabs",
+         "style": "arrayOfObject"
+      },
+      "zip": {
+         "attribute": "zipTabs",
+         "style": "arrayOfObject"
+      }
+   },
+   "approve": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "approve_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "mergeField": {
+      "propertyMetadata": {
+         "attribute": "writeBackMetadata",
+         "style": "object"
+      },
+      "pathExtendedElement": {
+         "attribute": "pathExtended",
+         "style": "arrayOfObject"
+      }
+   },
+   "checkbox": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "checkbox_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "commentThread": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "comment": {
+         "attribute": "comments",
+         "style": "arrayOfObject"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "commentThread_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "comment": {
+      "comment_mentions": {
+         "attribute": "mentions",
+         "style": "arrayOfScalar"
+      },
+      "comment_visibleTo": {
+         "attribute": "visibleTo",
+         "style": "arrayOfScalar"
+      }
+   },
+   "company": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "company_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "dateSigned": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "dateSigned_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "date": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "date_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "decline": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "decline_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "draw": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "draw_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "emailAddress": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "emailAddress_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "email": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "email_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "envelopeId": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "envelopeId_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "firstName": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "firstName_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "formulaTab": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "paymentDetails": {
+         "attribute": "paymentDetails",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "formulaTab_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "paymentDetails": {
+      "paymentDetails_allowedPaymentMethods": {
+         "attribute": "allowedPaymentMethods",
+         "style": "arrayOfScalar"
+      },
+      "propertyMetadata": {
+         "attribute": "gatewayAccountIdMetadata",
+         "style": "object"
+      },
+      "paymentLineItem": {
+         "attribute": "lineItems",
+         "style": "arrayOfObject"
+      },
+      "money": {
+         "attribute": "total",
+         "style": "object"
+      }
+   },
+   "fullName": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "fullName_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "initialHere": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "initialHere_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "lastName": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "lastName_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "list": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "listItem": {
+         "attribute": "listItems",
+         "style": "arrayOfObject"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "list_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "listItem": {
+      "propertyMetadata": {
+         "attribute": "valueMetadata",
+         "style": "object"
+      }
+   },
+   "notarize": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "notarize_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "note": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "note_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "number": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "number_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "polyLineOverlay": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "graphicsContext": {
+         "attribute": "graphicsContext",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "polyLine": {
+         "attribute": "polyLines",
+         "style": "arrayOfObject"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "polyLineOverlay_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "radioGroup": {
+      "propertyMetadata": {
+         "attribute": "tooltipMetadata",
+         "style": "object"
+      },
+      "radio": {
+         "attribute": "radios",
+         "style": "arrayOfObject"
+      }
+   },
+   "radio": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      }
+   },
+   "signerAttachment": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "signerAttachment_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "signHere": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "stamp": {
+         "attribute": "stamp",
+         "style": "object"
+      },
+      "signHere_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "stamp": {
+      "dateStampProperties": {
+         "attribute": "dateStampProperties",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      }
+   },
+   "smartSection": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "smartSectionDisplaySettings": {
+         "attribute": "displaySettings",
+         "style": "object"
+      },
+      "smartSectionAnchorPosition": {
+         "attribute": "startPosition",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "smartSection_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "smartSectionDisplaySettings": {
+      "smartSectionCollapsibleDisplaySettings": {
+         "attribute": "collapsibleSettings",
+         "style": "object"
+      }
+   },
+   "ssn": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "ssn_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "tabGroup": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "tabGroup_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "text": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "text_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "title": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "title_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "view": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "view_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "zip": {
+      "propertyMetadata": {
+         "attribute": "yPositionMetadata",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "localePolicyTab": {
+         "attribute": "localePolicy",
+         "style": "object"
+      },
+      "mergeField": {
+         "attribute": "mergeField",
+         "style": "object"
+      },
+      "smartContractInformation": {
+         "attribute": "smartContractInformation",
+         "style": "object"
+      },
+      "zip_tabGroupLabels": {
+         "attribute": "tabGroupLabels",
+         "style": "arrayOfScalar"
+      }
+   },
+   "inlineTemplate": {
+      "AccountCustomFields": {
+         "attribute": "customFields",
+         "style": "object"
+      },
+      "document": {
+         "attribute": "documents",
+         "style": "arrayOfObject"
+      },
+      "envelope": {
+         "attribute": "envelope",
+         "style": "object"
+      },
+      "EnvelopeRecipients": {
+         "attribute": "recipients",
+         "style": "object"
+      }
+   },
+   "AccountCustomFields": {
+      "listCustomField": {
+         "attribute": "listCustomFields",
+         "style": "arrayOfObject"
+      },
+      "textCustomField": {
+         "attribute": "textCustomFields",
+         "style": "arrayOfObject"
+      }
+   },
+   "listCustomField": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "listCustomField_listItems": {
+         "attribute": "listItems",
+         "style": "arrayOfScalar"
+      }
+   },
+   "textCustomField": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      }
+   },
+   "envelope": {
+      "AccountCustomFields": {
+         "attribute": "customFields",
+         "style": "object"
+      },
+      "emailSettings": {
+         "attribute": "emailSettings",
+         "style": "object"
+      },
+      "attachment": {
+         "attribute": "envelopeAttachments",
+         "style": "arrayOfObject"
+      },
+      "envelopeDocument": {
+         "attribute": "envelopeDocuments",
+         "style": "arrayOfObject"
+      },
+      "envelopeMetadata": {
+         "attribute": "envelopeMetadata",
+         "style": "object"
+      },
+      "folder": {
+         "attribute": "folders",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeLocks": {
+         "attribute": "lockInformation",
+         "style": "object"
+      },
+      "notification": {
+         "attribute": "notification",
+         "style": "object"
+      },
+      "powerForm": {
+         "attribute": "powerForm",
+         "style": "object"
+      },
+      "EnvelopeRecipients": {
+         "attribute": "recipients",
+         "style": "object"
+      },
+      "userInfo": {
+         "attribute": "sender",
+         "style": "object"
+      }
+   },
+   "emailSettings": {
+      "bccEmailAddress": {
+         "attribute": "bccEmailAddresses",
+         "style": "arrayOfObject"
+      }
+   },
+   "envelopeDocument": {
+      "envelopeDocument_addedRecipientIds": {
+         "attribute": "addedRecipientIds",
+         "style": "arrayOfScalar"
+      },
+      "propertyMetadata": {
+         "attribute": "signerMustAcknowledgeMetadata",
+         "style": "object"
+      },
+      "signatureType": {
+         "attribute": "availableDocumentTypes",
+         "style": "arrayOfObject"
+      },
+      "nameValue": {
+         "attribute": "documentFields",
+         "style": "arrayOfObject"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "page": {
+         "attribute": "pages",
+         "style": "arrayOfObject"
+      }
+   },
+   "page": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      }
+   },
+   "folder": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "filter": {
+         "attribute": "filter",
+         "style": "object"
+      },
+      "folderItem_v2": {
+         "attribute": "folderItems",
+         "style": "arrayOfObject"
+      },
+      "folder": {
+         "attribute": "folders",
+         "style": "arrayOfObject"
+      },
+      "userInfo": {
+         "attribute": "owner",
+         "style": "object"
+      }
+   },
+   "folderItem_v2": {
+      "EnvelopeRecipients": {
+         "attribute": "recipients",
+         "style": "object"
+      }
+   },
+   "EnvelopeRecipients": {
+      "agent": {
+         "attribute": "agents",
+         "style": "arrayOfObject"
+      },
+      "carbonCopy": {
+         "attribute": "carbonCopies",
+         "style": "arrayOfObject"
+      },
+      "certifiedDelivery": {
+         "attribute": "certifiedDeliveries",
+         "style": "arrayOfObject"
+      },
+      "editor": {
+         "attribute": "editors",
+         "style": "arrayOfObject"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "inPersonSigner": {
+         "attribute": "inPersonSigners",
+         "style": "arrayOfObject"
+      },
+      "intermediary": {
+         "attribute": "intermediaries",
+         "style": "arrayOfObject"
+      },
+      "sealSign": {
+         "attribute": "seals",
+         "style": "arrayOfObject"
+      },
+      "signer": {
+         "attribute": "signers",
+         "style": "arrayOfObject"
+      },
+      "witness": {
+         "attribute": "witnesses",
+         "style": "arrayOfObject"
+      }
+   },
+   "agent": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "recipientAdditionalNotification": {
+         "attribute": "additionalNotifications",
+         "style": "arrayOfObject"
+      },
+      "agent_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "agent_excludedDocuments": {
+         "attribute": "excludedDocuments",
+         "style": "arrayOfScalar"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      }
+   },
+   "recipientAdditionalNotification": {
+      "recipientPhoneNumber": {
+         "attribute": "phoneNumber",
+         "style": "object"
+      },
+      "propertyMetadata": {
+         "attribute": "secondaryDeliveryMethodMetadata",
+         "style": "object"
+      }
+   },
+   "recipientPhoneNumber": {
+      "propertyMetadata": {
+         "attribute": "numberMetadata",
+         "style": "object"
+      }
+   },
+   "documentVisibility": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      }
+   },
+   "recipientEmailNotification": {
+      "propertyMetadata": {
+         "attribute": "supportedLanguageMetadata",
+         "style": "object"
+      }
+   },
+   "idCheckInformationInput": {
+      "addressInformationInput": {
+         "attribute": "addressInformationInput",
+         "style": "object"
+      },
+      "dobInformationInput": {
+         "attribute": "dobInformationInput",
+         "style": "object"
+      },
+      "ssn4InformationInput": {
+         "attribute": "ssn4InformationInput",
+         "style": "object"
+      },
+      "ssn9InformationInput": {
+         "attribute": "ssn9InformationInput",
+         "style": "object"
+      }
+   },
+   "addressInformationInput": {
+      "addressInformation": {
+         "attribute": "addressInformation",
+         "style": "object"
+      }
+   },
+   "recipientIdentityVerification": {
+      "recipientIdentityInputOption": {
+         "attribute": "inputOptions",
+         "style": "arrayOfObject"
+      }
+   },
+   "recipientIdentityInputOption": {
+      "recipientIdentityPhoneNumber": {
+         "attribute": "phoneNumberList",
+         "style": "arrayOfObject"
+      }
+   },
+   "recipientPhoneAuthentication": {
+      "propertyMetadata": {
+         "attribute": "validateRecipProvidedNumberMetadata",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication_senderProvidedNumbers": {
+         "attribute": "senderProvidedNumbers",
+         "style": "arrayOfScalar"
+      }
+   },
+   "userInfo": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      }
+   },
+   "recipientSMSAuthentication": {
+      "recipientSMSAuthentication_senderProvidedNumbers": {
+         "attribute": "senderProvidedNumbers",
+         "style": "arrayOfScalar"
+      },
+      "propertyMetadata": {
+         "attribute": "senderProvidedNumbersMetadata",
+         "style": "object"
+      }
+   },
+   "carbonCopy": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "recipientAdditionalNotification": {
+         "attribute": "additionalNotifications",
+         "style": "arrayOfObject"
+      },
+      "carbonCopy_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "carbonCopy_excludedDocuments": {
+         "attribute": "excludedDocuments",
+         "style": "arrayOfScalar"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientProofFile": {
+         "attribute": "proofFile",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   },
+   "certifiedDelivery": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "recipientAdditionalNotification": {
+         "attribute": "additionalNotifications",
+         "style": "arrayOfObject"
+      },
+      "certifiedDelivery_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "certifiedDelivery_excludedDocuments": {
+         "attribute": "excludedDocuments",
+         "style": "arrayOfScalar"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientProofFile": {
+         "attribute": "proofFile",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      }
+   },
+   "editor": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "recipientAdditionalNotification": {
+         "attribute": "additionalNotifications",
+         "style": "arrayOfObject"
+      },
+      "editor_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      }
+   },
+   "inPersonSigner": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "inPersonSigner_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "inPersonSigner_excludedDocuments": {
+         "attribute": "excludedDocuments",
+         "style": "arrayOfScalar"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "notaryHost": {
+         "attribute": "notaryHost",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "recipientSignatureProvider": {
+         "attribute": "recipientSignatureProviders",
+         "style": "arrayOfObject"
+      },
+      "recipientSignatureInformation": {
+         "attribute": "signatureInfo",
+         "style": "object"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   },
+   "notaryHost": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "notaryHost_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   },
+   "recipientSignatureProvider": {
+      "propertyMetadata": {
+         "attribute": "signatureProviderNameMetadata",
+         "style": "object"
+      },
+      "recipientSignatureProviderOptions": {
+         "attribute": "signatureProviderOptions",
+         "style": "object"
+      }
+   },
+   "recipientSignatureProviderOptions": {
+      "propertyMetadata": {
+         "attribute": "smsMetadata",
+         "style": "object"
+      }
+   },
+   "intermediary": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "recipientAdditionalNotification": {
+         "attribute": "additionalNotifications",
+         "style": "arrayOfObject"
+      },
+      "intermediary_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "intermediary_excludedDocuments": {
+         "attribute": "excludedDocuments",
+         "style": "arrayOfScalar"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      }
+   },
+   "sealSign": {
+      "propertyMetadata": {
+         "attribute": "routingOrderMetadata",
+         "style": "object"
+      },
+      "sealSign_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "recipientSignatureProvider": {
+         "attribute": "recipientSignatureProviders",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   },
+   "signer": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "recipientAdditionalNotification": {
+         "attribute": "additionalNotifications",
+         "style": "arrayOfObject"
+      },
+      "signer_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "signer_excludedDocuments": {
+         "attribute": "excludedDocuments",
+         "style": "arrayOfScalar"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientProofFile": {
+         "attribute": "proofFile",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "recipientSignatureProvider": {
+         "attribute": "recipientSignatureProviders",
+         "style": "arrayOfObject"
+      },
+      "recipientSignatureInformation": {
+         "attribute": "signatureInfo",
+         "style": "object"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   },
+   "witness": {
+      "propertyMetadata": {
+         "attribute": "signingGroupIdMetadata",
+         "style": "object"
+      },
+      "recipientAdditionalNotification": {
+         "attribute": "additionalNotifications",
+         "style": "arrayOfObject"
+      },
+      "witness_customFields": {
+         "attribute": "customFields",
+         "style": "arrayOfScalar"
+      },
+      "documentVisibility": {
+         "attribute": "documentVisibility",
+         "style": "arrayOfObject"
+      },
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "witness_excludedDocuments": {
+         "attribute": "excludedDocuments",
+         "style": "arrayOfScalar"
+      },
+      "idCheckInformationInput": {
+         "attribute": "idCheckInformationInput",
+         "style": "object"
+      },
+      "recipientIdentityVerification": {
+         "attribute": "identityVerification",
+         "style": "object"
+      },
+      "offlineAttributes": {
+         "attribute": "offlineAttributes",
+         "style": "object"
+      },
+      "recipientPhoneAuthentication": {
+         "attribute": "phoneAuthentication",
+         "style": "object"
+      },
+      "recipientProofFile": {
+         "attribute": "proofFile",
+         "style": "object"
+      },
+      "recipientAttachment": {
+         "attribute": "recipientAttachments",
+         "style": "arrayOfObject"
+      },
+      "authenticationStatus": {
+         "attribute": "recipientAuthenticationStatus",
+         "style": "object"
+      },
+      "featureAvailableMetadata": {
+         "attribute": "recipientFeatureMetadata",
+         "style": "arrayOfObject"
+      },
+      "recipientSignatureProvider": {
+         "attribute": "recipientSignatureProviders",
+         "style": "arrayOfObject"
+      },
+      "recipientSignatureInformation": {
+         "attribute": "signatureInfo",
+         "style": "object"
+      },
+      "userInfo": {
+         "attribute": "signingGroupUsers",
+         "style": "arrayOfObject"
+      },
+      "recipientSMSAuthentication": {
+         "attribute": "smsAuthentication",
+         "style": "object"
+      },
+      "socialAuthentication": {
+         "attribute": "socialAuthentications",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   },
+   "EnvelopeLocks": {
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "userInfo": {
+         "attribute": "lockedByUser",
+         "style": "object"
+      }
+   },
+   "notification": {
+      "expirations": {
+         "attribute": "expirations",
+         "style": "object"
+      },
+      "reminders": {
+         "attribute": "reminders",
+         "style": "object"
+      }
+   },
+   "powerForm": {
+      "envelope": {
+         "attribute": "envelopes",
+         "style": "arrayOfObject"
+      },
+      "errorDetails": {
+         "attribute": "errorDetails",
+         "style": "object"
+      },
+      "powerFormRecipient": {
+         "attribute": "recipients",
+         "style": "arrayOfObject"
+      }
+   },
+   "eventNotification": {
+      "envelopeEvent": {
+         "attribute": "envelopeEvents",
+         "style": "arrayOfObject"
+      },
+      "connectEventData": {
+         "attribute": "eventData",
+         "style": "object"
+      },
+      "recipientEvent": {
+         "attribute": "recipientEvents",
+         "style": "arrayOfObject"
+      }
+   },
+   "connectEventData": {
+      "connectEventData_includeData": {
+         "attribute": "includeData",
+         "style": "arrayOfScalar"
+      }
+   },
+   "templateRole": {
+      "recipientEmailNotification": {
+         "attribute": "emailNotification",
+         "style": "object"
+      },
+      "recipientSignatureProvider": {
+         "attribute": "recipientSignatureProviders",
+         "style": "arrayOfObject"
+      },
+      "EnvelopeRecipientTabs": {
+         "attribute": "tabs",
+         "style": "object"
+      }
+   }
+}

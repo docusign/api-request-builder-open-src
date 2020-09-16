@@ -1,0 +1,22 @@
+{
+  "name": "api-request-builder-sdk-example",
+  "homepage": "http://localhost/api-request-builder/build/",
+  "description": "This example lets you run the Node.JS SDK output from API Request Builder",
+  "repository": "tbd",
+  "version": "1.0.0",
+  "private": false,
+  "author": "DocuSign",
+  "license": "MIT",
+  "scripts": {
+    "debug": "node  --inspect-brk index.js",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=8.10"
+  },
+  "dependencies": {
+    "docusign-esign": "^5.1.0",
+    "fs-extra": "^6.0.1",
+    "path": "^0.12.7"
+  }
+}

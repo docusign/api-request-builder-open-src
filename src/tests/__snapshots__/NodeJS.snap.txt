@@ -1,0 +1,42 @@
+    let signHereTab1 = docusign.SignHere.constructFromObject({
+        anchorString: "/sig1/",  
+        anchorUnits: "pixels",  
+        anchorXOffset: "20" 
+        });
+    let signHereTabs1 = [signHereTab1];
+    let tabs1 = docusign.Tabs.constructFromObject({
+        signHereTabs: signHereTabs1 
+        });
+    let signer1 = docusign.Signer.constructFromObject({
+        clientUserId: "1000",  
+        email: "signer_email@example.com",  
+        name: "Signer's name",  
+        recipientId: "1",  
+        tabs: tabs1 
+        });
+    let signers1 = [signer1];
+    let recipients1 = docusign.Recipients.constructFromObject({
+        signers: signers1 
+        });
+    let document1 = docusign.Document.constructFromObject({
+        documentId: "1",  
+        fileExtension: "pdf",  
+        documentBase64: await readDocFileB64("anchorfields.pdf"),  // filename is anchorfields.pdf
+        name: "Example document" 
+        });
+    let documents1 = [document1];
+    let envelopeDefinition = docusign.EnvelopeDefinition.constructFromObject({
+        documents: documents1,  
+        emailSubject: "Please sign the attached document",  
+        recipients: recipients1,  
+        status: "sent" 
+        });
+
+
+    let recipientViewRequest = docusign.RecipientViewRequest.constructFromObject({
+        authenticationMethod: "none",  
+        clientUserId: "1000",  
+        email: "signer_email@example.com",  
+        returnUrl: "https://docusign.com",  
+        userName: "Signer's name" 
+        });
